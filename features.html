@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitur Unggulan - Kolaksi CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Kolaksi</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="features.html" class="text-sm font-medium text-brand-600">Fitur</a>
+                <a href="pricing.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Harga</a>
+                <a href="faq.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">FAQ</a>
+            </div>
+            <a href="index.html#join" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white transition-all duration-200 bg-brand-600 border border-transparent rounded-full hover:bg-brand-700">
+                Gabung Waitlist
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-50/50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6 border border-brand-100">Powerful Features</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                Semua Tool yang Kamu Butuhin Buat <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500">Dominasi WhatsApp Marketing</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
+                Lupakan cara manual yang bikin capek. Otomatisasi, tracking, dan broadcast aman dalam satu dashboard pintar.
+            </p>
+        </div>
+    </header>
+
+    <!-- Feature Blocks -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+            
+            <!-- Feature 1: Tracking -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">📊</div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Response Tracking Real-time</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        Nggak ada lagi drama "lupa bales chat". Dashboard Kolaksi ngasih tau kamu chat mana yang belum disentuh CS, berapa lama durasi respon, dan siapa CS paling perform.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Monitoring SLA Respon CS
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Filter Chat Unread & Unreplied
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 bg-white rounded-2xl shadow-xl border border-slate-200 p-2 transform hover:scale-[1.02] transition-transform duration-500">
+                    <div class="bg-slate-100 rounded-xl h-64 md:h-80 w-full flex items-center justify-center relative overflow-hidden">
+                        <!-- Placeholder visualization -->
+                        <div class="text-center p-6">
+                            <div class="w-full max-w-xs mx-auto bg-white rounded-lg shadow-sm p-4 mb-3">
+                                <div class="h-2 bg-slate-200 rounded w-1/3 mb-2"></div>
+                                <div class="h-2 bg-slate-100 rounded w-2/3"></div>
+                            </div>
+                            <div class="w-full max-w-xs mx-auto bg-white rounded-lg shadow-sm p-4 opacity-75">
+                                <div class="h-2 bg-slate-200 rounded w-1/4 mb-2"></div>
+                                <div class="h-2 bg-slate-100 rounded w-1/2"></div>
+                            </div>
+                            <p class="mt-4 text-sm font-medium text-slate-400">Visualisasi Dashboard Tracking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Official Broadcast -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-2 transform hover:scale-[1.02] transition-transform duration-500">
+                    <div class="bg-slate-100 rounded-xl h-64 md:h-80 w-full flex items-center justify-center relative overflow-hidden">
+                        <div class="text-center p-6">
+                            <div class="w-12 h-12 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">✓</div>
+                            <p class="text-sm font-medium text-slate-400">Verified Broadcast</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">📢</div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Broadcast Aman Anti-Blokir</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        Kirim ribuan pesan promo tanpa deg-degan. Karena pakai jalur resmi API WhatsApp, nomor kamu aman dari banned massal. Tingkatkan retensi pelanggan dengan percaya diri.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Green Tick (Centang Hijau) Support
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Template Pesan Terverifikasi Meta
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3: Coexistence -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">🔄</div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">WhatsApp Coexistence</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        Masih butuh pakai HP buat bales chat urgent? Tenang. Dengan fitur Coexistence, nomor yang sama bisa aktif di Dashboard Kolaksi dan di aplikasi WhatsApp HP kamu sekaligus.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Sync Otomatis HP & Dashboard
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Fleksibilitas untuk Owner & Tim
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 bg-white rounded-2xl shadow-xl border border-slate-200 p-2 transform hover:scale-[1.02] transition-transform duration-500">
+                    <div class="bg-slate-100 rounded-xl h-64 md:h-80 w-full flex items-center justify-center relative overflow-hidden">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-16 h-24 bg-white border border-slate-300 rounded-lg flex items-center justify-center shadow-sm">📱</div>
+                            <div class="text-slate-400 font-bold text-xl">+</div>
+                            <div class="w-32 h-20 bg-white border border-slate-300 rounded-lg flex items-center justify-center shadow-sm">💻</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Bottom -->
+    <section class="py-20 bg-brand-900">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Cukup Baca Fiturnya?</h2>
+            <p class="text-brand-100 text-lg mb-8">Rasakan sendiri bedanya ngurus bisnis pakai tools beneran vs manual.</p>
+            <a href="index.html#join" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-brand-900 transition-all duration-200 bg-white rounded-full hover:bg-brand-50 hover:shadow-lg hover:-translate-y-1">
+                Cobain Kolaksi Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-sm">
+        <p>&copy; 2026 PT Generasi Izzah Indonesia. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

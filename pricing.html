@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga Langganan - Kolaksi CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Kolaksi</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="features.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Fitur</a>
+                <a href="pricing.html" class="text-sm font-medium text-brand-600">Harga</a>
+                <a href="faq.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">FAQ</a>
+            </div>
+            <a href="index.html#join" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white transition-all duration-200 bg-brand-600 border border-transparent rounded-full hover:bg-brand-700">
+                Gabung Waitlist
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-20 text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Investasi Cerdas untuk Bisnis Kamu</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Pilih paket yang pas buat skala bisnismu sekarang. Upgrade kapan aja kalau orderan makin meledak.
+        </p>
+    </header>
+
+    <!-- Pricing Tables -->
+    <section class="pb-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
+            
+            <!-- Starter Plan -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Starter</h3>
+                <p class="text-slate-500 text-sm mb-6">Cocok buat yang baru mulai rapihin database.</p>
+                <div class="flex items-baseline gap-1 mb-6">
+                    <span class="text-4xl font-extrabold text-slate-900">Rp 199rb</span>
+                    <span class="text-slate-500">/bulan</span>
+                </div>
+                <a href="index.html#join" class="block w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-xl text-center transition-colors mb-8">
+                    Pilih Starter
+                </a>
+                <ul class="space-y-4 text-sm text-slate-600">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        1 Nomor WhatsApp Official
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Hingga 2 CS / Admin
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Basic Reporting
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Broadcast (Manual)
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Pro Plan (Highlight) -->
+            <div class="bg-white rounded-2xl p-8 border-2 border-brand-500 shadow-xl relative transform md:-translate-y-4">
+                <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
+                    <span class="bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Paling Laris</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Business Pro</h3>
+                <p class="text-slate-500 text-sm mb-6">Buat yang orderannya udah mulai kenceng.</p>
+                <div class="flex items-baseline gap-1 mb-6">
+                    <span class="text-4xl font-extrabold text-slate-900">Rp 499rb</span>
+                    <span class="text-slate-500">/bulan</span>
+                </div>
+                <a href="index.html#join" class="block w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-center transition-colors mb-8 shadow-lg shadow-brand-200">
+                    Pilih Business Pro
+                </a>
+                <ul class="space-y-4 text-sm text-slate-600">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <strong>Semua fitur Starter</strong>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Hingga 10 CS / Admin
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Advanced Response Tracking
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Automated Broadcast
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Green Tick Assistance
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Enterprise</h3>
+                <p class="text-slate-500 text-sm mb-6">Skala besar, custom needs, support prioritas.</p>
+                <div class="flex items-baseline gap-1 mb-6">
+                    <span class="text-4xl font-extrabold text-slate-900">Custom</span>
+                </div>
+                <a href="index.html#join" class="block w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-xl text-center transition-colors mb-8">
+                    Hubungi Sales
+                </a>
+                <ul class="space-y-4 text-sm text-slate-600">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Unlimited CS / Admin
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Dedicated Account Manager
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Custom API Integration
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        SLA Support 99.9%
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-12 text-slate-500 text-sm">
+            <p>*Harga belum termasuk biaya percakapan WhatsApp (BSP Cost) yang ditagihkan terpisah sesuai penggunaan.</p>
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800 text-center">
+        <p class="text-sm">&copy; 2026 PT Generasi Izzah Indonesia. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

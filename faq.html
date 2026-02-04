@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanya Jawab (FAQ) - Kolaksi CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Kolaksi</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="features.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Fitur</a>
+                <a href="pricing.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Harga</a>
+                <a href="faq.html" class="text-sm font-medium text-brand-600">FAQ</a>
+            </div>
+            <a href="index.html#join" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white transition-all duration-200 bg-brand-600 border border-transparent rounded-full hover:bg-brand-700">
+                Gabung Waitlist
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 text-center px-4 bg-white">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Pertanyaan Umum</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Masih bingung soal Kolaksi? Cek jawaban dari pertanyaan yang paling sering diajukan di sini.
+        </p>
+    </header>
+
+    <!-- FAQ Content -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="space-y-6">
+
+            <!-- Q1 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 hover:shadow-sm transition-shadow">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Bedanya Kolaksi sama WhatsApp Biasa apa?</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Kolaksi pakai <strong>WhatsApp Business API Official</strong>. Bedanya: bisa dipake banyak CS (multi-user) sekaligus di satu nomor, bisa broadcast tanpa limit (asal ikut aturan Meta), bisa dapet Centang Hijau, dan punya fitur tracking/report yang gak ada di WA biasa.
+                </p>
+            </div>
+
+            <!-- Q2 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 hover:shadow-sm transition-shadow">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Apa itu fitur Coexistence?</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Ini fitur spesial yang bikin kamu bisa pake nomor WA yang sama di Dashboard Kolaksi DAN di aplikasi WhatsApp HP kamu secara bersamaan. Jadi kalau lagi di jalan, tetep bisa bales chat lewat HP seperti biasa. History chat-nya tetep sync.
+                </p>
+            </div>
+
+            <!-- Q3 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 hover:shadow-sm transition-shadow">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Apakah dijamin anti-blokir?</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Karena pakai jalur resmi (API), risiko blokir jauh lebih kecil dibanding WA unofficial/tools blast abal-abal. <strong>TAPI</strong>, Meta tetap punya aturan main (misal: gak boleh spam judi/obat ilegal). Selama kamu ikut aturan konten Meta, nomor kamu aman.
+                </p>
+            </div>
+
+            <!-- Q4 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 hover:shadow-sm transition-shadow">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Berapa biaya tambahannya?</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Selain biaya langganan Kolaksi, ada biaya percakapan (Conversation Cost) yang ditagih langsung oleh Meta. Biayanya bervariasi tergantung jenis percakapan (Marketing, Utility, Authentication, atau Service). Kami akan kasih rincian transparan soal ini.
+                </p>
+            </div>
+
+            <!-- Q5 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 hover:shadow-sm transition-shadow">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Gimana cara daftarnya?</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Klik tombol "Gabung Waitlist" di atas. Tim kami akan hubungi kamu buat bantu proses verifikasi bisnis ke Meta (syarat wajib WA API) dan setup akun Kolaksi kamu.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Simple -->
+    <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800 text-center">
+        <p class="text-sm">&copy; 2026 PT Generasi Izzah Indonesia. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
