@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolaksi - CRM WhatsApp Official untuk UMKM</title>
+    <meta name="description" content="Ubah chat WhatsApp jadi closing. CRM WhatsApp anti-blokir dengan fitur tracking response untuk UMKM.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#10b981', // Emerald for "Success/Closing"
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <!-- Logo Placeholder -->
+                <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Kolaksi</span>
+            </div>
+            <a href="#join" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white transition-all duration-200 bg-brand-600 border border-transparent rounded-full hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
+                Gabung Waitlist
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-accent-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-sm font-medium mb-8">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Solusi WhatsApp Official untuk UMKM
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                Leads WhatsApp Numpuk,<br class="hidden sm:block" /> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500">Tapi Closing Sedikit?</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Ubah chat yang "cuma tanya-tanya" jadi pembeli beneran. Pakai <strong>Kolaksi</strong>, CRM yang bikin tim CS kamu lebih rapi, terukur, dan anti-blokir.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#join" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
+                    Gabung Waitlist Sekarang
+                </a>
+                <p class="text-sm text-slate-500 sm:mt-0 mt-2">
+                    <span class="text-emerald-600">✓</span> Gratis akses awal 100 pendaftar
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Masalah Klasik Jualan di WhatsApp</h2>
+                <p class="text-slate-600 text-lg">Sering ngalamin ini? Jangan dibiarin terus, nanti boncos!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6">📉</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Chat Tenggelam</h3>
+                    <p class="text-slate-600 leading-relaxed">Saking banyaknya chat masuk, lead potensial malah kelewat nggak dibales. Sayang banget kan?</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-6">👻</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">CS "Hantu"</h3>
+                    <p class="text-slate-600 leading-relaxed">Nggak tau CS mana yang rajin, mana yang slow response. Owner jadi susah evaluasi kinerja.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-slate-200 text-slate-700 rounded-xl flex items-center justify-center text-2xl mb-6">🚫</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Takut Keblokir</h3>
+                    <p class="text-slate-600 leading-relaxed">Niat hati mau broadcast promo ke pelanggan lama, eh besoknya nomor malah hangus dibanned WA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wide mb-6">
+                        Solusi Kolaksi
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                        Bikin WhatsApp Jadi Mesin Closing, Bukan Cuma Chatting
+                    </h2>
+                    <p class="text-slate-600 text-lg mb-8">
+                        Kolaksi bantu rapihin flow chat kamu biar nggak ada duit yang tercecer di meja.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center mt-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Tracking Response Real-time</h4>
+                                <p class="text-slate-600">Kelihatan jelas chat mana yang belum disentuh. Nggak ada lagi lead yang "basi" karena kelamaan nunggu.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center mt-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Official & Aman (Anti-Banned)</h4>
+                                <p class="text-slate-600">Pakai jalur resmi WhatsApp API. Kirim broadcast promo tenang, nomor aman terjaga.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center mt-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">WhatsApp Coexistence</h4>
+                                <p class="text-slate-600">Bisa pakai nomor yang sama di HP (WA biasa) dan di dashboard Kolaksi. Fleksibel banget!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Placeholder UI Image -->
+                    <div class="rounded-2xl shadow-2xl bg-white border border-slate-200 p-2 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                         <!-- Simple Mockup -->
+                        <div class="bg-slate-50 rounded-xl h-96 flex items-center justify-center text-slate-400">
+                             <!-- You would put a screenshot here -->
+                             <div class="text-center p-8">
+                                 <svg class="w-16 h-16 mx-auto mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                 <span class="font-medium">Dashboard Preview</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="join" class="py-20 bg-brand-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Siap Beresin WhatsApp Bisnis Kamu?</h2>
+            <p class="text-brand-100 text-lg mb-10 max-w-2xl mx-auto">
+                Daftar waitlist sekarang buat dapet info rilis duluan dan harga spesial *early bird*.
+            </p>
+            
+            <form class="max-w-md mx-auto flex flex-col gap-4">
+                <input type="email" placeholder="Masukkan alamat email bisnis" class="w-full px-5 py-4 rounded-xl text-slate-900 focus:outline-none focus:ring-4 focus:ring-brand-500/50 border-0" required>
+                <button type="button" class="w-full px-8 py-4 text-base font-bold text-brand-900 transition-all duration-200 bg-white rounded-xl hover:bg-brand-50 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
+                    Kabari Saya Saat Rilis 🚀
+                </button>
+                <p class="text-brand-200 text-sm mt-2">🔒 Data aman. No spam, janji.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-xs">K</div>
+                        <span class="text-lg font-bold text-white">Kolaksi</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                        Platform CRM WhatsApp Official yang membantu UMKM meningkatkan konversi penjualan dan manajemen tim CS.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>PT Generasi Izzah Indonesia</li>
+                        <li>Jl. [Nama Jalan], [Kota]</li>
+                        <li>0812-XXXX-XXXX</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Link</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2026 PT Generasi Izzah Indonesia. All rights reserved.</p>
+                <p>Made with ❤️ in Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
