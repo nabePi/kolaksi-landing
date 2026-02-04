@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus: SouvenirNikah.id - Kolaksi CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Kolaksi</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="features.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Fitur</a>
+                <a href="pricing.html" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Harga</a>
+                <a href="case-study.html" class="text-sm font-medium text-brand-600">Studi Kasus</a>
+            </div>
+            <a href="index.html#join" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white transition-all duration-200 bg-brand-600 border border-transparent rounded-full hover:bg-brand-700">
+                Gabung Waitlist
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-20 bg-white relative overflow-hidden border-b border-slate-100">
+        <div class="absolute inset-0 bg-slate-50/50"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-orange-100 text-orange-700 text-xs font-bold uppercase tracking-wider mb-6 border border-orange-200">Studi Kasus UMKM</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                Dari "Chat Numpuk" Jadi <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Omzet Naik 35%</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Cerita <strong>SouvenirNikah.id</strong> yang hampir gulung tikar gara-gara WhatsApp error, sekarang malah buka cabang baru.
+            </p>
+        </div>
+    </header>
+
+    <!-- Case Study Content -->
+    <div class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Profile -->
+        <div class="flex items-center gap-4 mb-12 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+            <div class="w-16 h-16 bg-slate-200 rounded-full flex-shrink-0 flex items-center justify-center text-3xl">🎁</div>
+            <div>
+                <h3 class="font-bold text-slate-900 text-lg">SouvenirNikah.id</h3>
+                <p class="text-slate-500 text-sm">Bisnis Souvenir & Undangan di Yogyakarta</p>
+                <div class="flex gap-4 mt-2 text-xs font-medium text-slate-600">
+                    <span class="bg-slate-100 px-2 py-1 rounded">UMKM Retail</span>
+                    <span class="bg-slate-100 px-2 py-1 rounded">5 Admin CS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before: The Problem -->
+        <section class="mb-16 relative">
+            <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-200 -z-10"></div>
+            
+            <div class="ml-12 mb-12">
+                <span class="absolute left-0 w-8 h-8 rounded-full bg-red-100 text-red-600 border-4 border-slate-50 flex items-center justify-center font-bold text-sm">1</span>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Masalah: "HP Panas, Customer Lepas"</h2>
+                <div class="prose prose-slate text-slate-600">
+                    <p>
+                        Setiap musim nikah, WA SouvenirNikah.id banjir 300+ chat sehari. Admin cuma 2 orang, HP operasional sering <em>hang</em> karena memori penuh.
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 mt-4">
+                        <li><strong>Slow Respon Parah:</strong> Rata-rata bales chat butuh 4 jam. Calon pengantin yang nggak sabar langsung kabur ke kompetitor.</li>
+                        <li><strong>Broadcast Bencana:</strong> Pernah coba kirim promo "Diskon Akhir Tahun" manual ke 500 kontak. Besoknya? <strong>Nomor diblokir WhatsApp.</strong> Hilang database pelanggan 2 tahun.</li>
+                        <li><strong>CS 'Nakal':</strong> Owner nggak bisa pantau, mana chat yang udah dibales, mana yang dianggurin.</li>
+                    </ul>
+                </div>
+                <div class="mt-6 p-4 bg-red-50 border border-red-100 rounded-xl text-red-800 text-sm font-medium italic">
+                    "Rasanya mau nangis. Leads banyak masuk, tapi yang closing dikit banget cuma gara-gara kita telat bales." — Owner
+                </div>
+            </div>
+
+            <!-- Transformation: The Solution -->
+            <div class="ml-12 mb-12">
+                <span class="absolute left-0 w-8 h-8 rounded-full bg-brand-100 text-brand-600 border-4 border-slate-50 flex items-center justify-center font-bold text-sm">2</span>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Solusi: Pindah ke Kolaksi</h2>
+                <div class="prose prose-slate text-slate-600">
+                    <p>
+                        Akhirnya mereka memutuskan pakai <strong>Kolaksi</strong> (WhatsApp Official API). Setup cuma butuh 2 hari buat verifikasi Facebook Business Manager.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 mt-6 not-prose">
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl">
+                            <h4 class="font-bold text-slate-900 mb-2">✅ Multi-Agent Resmi</h4>
+                            <p class="text-sm">5 CS login barengan di laptop masing-masing pakai 1 nomor. Nggak ada lagi rebutan HP.</p>
+                        </div>
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl">
+                            <h4 class="font-bold text-slate-900 mb-2">✅ Tracking 'Chat Basi'</h4>
+                            <p class="text-sm">Di dashboard Kolaksi, chat yang belum dibales > 15 menit otomatis jadi merah. Owner langsung bisa negur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After: The Result -->
+            <div class="ml-12">
+                <span class="absolute left-0 w-8 h-8 rounded-full bg-green-100 text-green-600 border-4 border-slate-50 flex items-center justify-center font-bold text-sm">3</span>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Hasil: 2 Bulan Setelah Pakai</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+                    <div class="bg-green-50 p-6 rounded-2xl text-center border border-green-100">
+                        <div class="text-3xl font-extrabold text-green-600 mb-1">35%</div>
+                        <div class="text-sm font-medium text-green-800">Kenaikan Omzet</div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-2xl text-center border border-blue-100">
+                        <div class="text-3xl font-extrabold text-blue-600 mb-1">5mnt</div>
+                        <div class="text-sm font-medium text-blue-800">Rata-rata Respon</div>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-2xl text-center border border-purple-100">
+                        <div class="text-3xl font-extrabold text-purple-600 mb-1">0</div>
+                        <div class="text-sm font-medium text-purple-800">Nomor Terblokir</div>
+                    </div>
+                </div>
+                <div class="mt-8 p-6 bg-slate-900 rounded-2xl text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <p class="text-lg italic leading-relaxed opacity-90 mb-4">
+                            "Sekarang broadcast promo ke 2.000 database lama cuma butuh 1x klik, aman, dan langsung masuk notifikasi customer. Kolaksi beneran nyelamatin bisnis saya."
+                        </p>
+                        <div class="font-bold">— Budi, Owner SouvenirNikah.id</div>
+                    </div>
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 text-slate-800 opacity-20 text-9xl font-serif">"</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center pt-12 border-t border-slate-200">
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Mau Bisnis Kamu Kaya Gini Juga?</h3>
+            <p class="text-slate-600 mb-8">Jangan tunggu sampai customer kabur gara-gara chat numpuk.</p>
+            <a href="index.html#join" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-1">
+                Konsultasi Gratis Sekarang
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer Simple -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-sm">
+        <p>&copy; 2026 PT Generasi Izzah Indonesia. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
