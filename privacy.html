@@ -114,45 +114,107 @@
     </header>
 
     <!-- Content -->
-    <div class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12 prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-900 prose-a:text-brand-600 hover:prose-a:text-brand-700">
-            <p class="text-sm text-slate-500 mb-8 border-b border-slate-100 pb-4">Terakhir diperbarui: 4 Februari 2026</p>
+    <div class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
+            
+            <div class="prose prose-lg prose-slate max-w-none text-slate-600">
+                <p class="text-sm text-slate-500 mb-8 pb-4 border-b border-slate-100">
+                    Terakhir diperbarui: <strong>5 Februari 2026</strong>
+                </p>
 
-            <h3>1. Pendahuluan</h3>
-            <p>PT Generasi Izzah Indonesia ("Kami", "Kolaksi") menghargai privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda saat menggunakan layanan CRM Kolaksi.</p>
+                <p class="lead text-xl text-slate-700 font-medium mb-8">
+                    Di <strong>Kolaksi</strong> (PT Generasi Izzah Indonesia), kami paham betul bahwa data pelanggan adalah aset paling berharga bagi bisnis Anda. Dokumen ini menjelaskan secara transparan bagaimana kami menjaga amanah tersebut.
+                </p>
 
-            <h3>2. Data yang Kami Kumpulkan</h3>
-            <p>Kami mengumpulkan informasi berikut untuk menyediakan layanan:</p>
-            <ul>
-                <li><strong>Informasi Akun:</strong> Nama, alamat email, nomor telepon, dan nama bisnis.</li>
-                <li><strong>Data WhatsApp:</strong> Pesan, kontak, dan metadata percakapan yang diproses melalui API WhatsApp Business (sesuai dengan ketentuan Meta).</li>
-                <li><strong>Log Penggunaan:</strong> Aktivitas login, durasi penggunaan, dan fitur yang diakses.</li>
-            </ul>
+                <div class="space-y-12">
+                    <!-- Section 1 -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">1</span>
+                            Data yang Kami Kumpulkan
+                        </h3>
+                        <p>Agar layanan Kolaksi bisa berjalan optimal, kami perlu mengelola beberapa jenis informasi:</p>
+                        <ul class="list-disc pl-6 space-y-2 mt-4">
+                            <li><strong>Identitas Bisnis:</strong> Nama perusahaan, alamat email, nomor telepon, dan NPWP (jika ada).</li>
+                            <li><strong>Kredensial WhatsApp:</strong> Token akses API dan ID Akun WhatsApp Business (WABA ID) yang diperlukan untuk menghubungkan nomor Anda ke dashboard Kolaksi.</li>
+                            <li><strong>Data Percakapan:</strong> Pesan masuk dan keluar, kontak pelanggan, dan file media yang dikirim melalui platform kami.</li>
+                        </ul>
+                    </section>
 
-            <h3>3. Penggunaan Data</h3>
-            <p>Data Anda digunakan semata-mata untuk:</p>
-            <ul>
-                <li>Menyediakan fungsionalitas dashboard CRM.</li>
-                <li>Mengirimkan notifikasi sistem dan update produk.</li>
-                <li>Menganalisis performa sistem untuk perbaikan fitur.</li>
-            </ul>
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r">
-                <p class="text-brand-700 font-medium m-0"><strong>Komitmen Kami:</strong> Kami tidak akan pernah menjual data pelanggan atau percakapan Anda kepada pihak ketiga.</p>
+                    <!-- Section 2 -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">2</span>
+                            Bagaimana Data Digunakan
+                        </h3>
+                        <p>Kami bukan broker data. Informasi Anda hanya digunakan untuk:</p>
+                        <ul class="list-disc pl-6 space-y-2 mt-4">
+                            <li>Menyediakan fitur utama dashboard (kirim/terima pesan, broadcast, auto-reply).</li>
+                            <li>Mengirimkan notifikasi penting terkait akun (misal: kuota habis, tagihan, atau update fitur).</li>
+                            <li>Menganalisis performa sistem agar server kami tetap ngebut dan stabil.</li>
+                        </ul>
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 mt-6 rounded-r-lg">
+                            <p class="text-emerald-800 text-sm m-0 font-medium">
+                                🛡️ <strong>Janji Kami:</strong> Kami tidak akan pernah menjual, menyewakan, atau menukar data kontak pelanggan Anda kepada pihak ketiga manapun. Data pelanggan Anda adalah milik Anda 100%.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Section 3 -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">3</span>
+                            Penyimpanan & Keamanan
+                        </h3>
+                        <p class="mb-4">
+                            Keamanan adalah fitur "default" kami, bukan add-on.
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Enkripsi:</strong> Semua data yang dikirim dari browser Anda ke server kami dilindungi dengan enkripsi SSL/TLS 256-bit (standar perbankan).</li>
+                            <li><strong>Server:</strong> Data disimpan di pusat data yang aman dengan akses fisik terbatas.</li>
+                            <li><strong>Akses Internal:</strong> Hanya tim engineer inti yang memiliki akses ke server database, itu pun dengan protokol keamanan ketat (2FA & VPN).</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 4 -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">4</span>
+                            Pihak Ketiga (Sub-processor)
+                        </h3>
+                        <p>Untuk menjalankan layanan, kami bekerja sama dengan mitra teknologi terpercaya:</p>
+                        <ul class="list-disc pl-6 space-y-2 mt-4">
+                            <li><strong>Meta (WhatsApp):</strong> Sebagai penyedia infrastruktur pesan utama.</li>
+                            <li><strong>Google Cloud / AWS:</strong> Sebagai penyedia infrastruktur server (hosting).</li>
+                            <li><strong>Payment Gateway (Midtrans/Xendit):</strong> Untuk memproses pembayaran langganan Anda.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 5 -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-100 text-brand-600 text-sm">5</span>
+                            Kontrol di Tangan Anda
+                        </h3>
+                        <p>Kapanpun Anda mau, Anda berhak untuk:</p>
+                        <ul class="list-disc pl-6 space-y-2 mt-4">
+                            <li>Meminta salinan data (Export Data) yang kami simpan.</li>
+                            <li>Meminta penghapusan akun dan seluruh data terkait (Right to be Forgotten).</li>
+                            <li>Berhenti berlangganan dan menarik izin akses API WhatsApp.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Contact -->
+                    <div class="pt-8 border-t border-slate-100 mt-12">
+                        <p class="text-base text-slate-500 text-center">
+                            Masih ada yang mengganjal soal privasi?<br>
+                            Jangan ragu untuk ngobrol sama tim DPO (Data Protection Officer) kami di:
+                            <a href="mailto:privacy@kolaksi.id" class="text-brand-600 font-bold hover:underline">privacy@kolaksi.id</a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
-
-            <h3>4. Keamanan Data</h3>
-            <p>Kami menggunakan enkripsi standar industri (SSL/TLS) untuk melindungi data saat transit dan penyimpanan. Akses ke data dibatasi hanya untuk personel yang berkepentingan.</p>
-
-            <h3>5. Hak Pengguna</h3>
-            <p>Anda berhak untuk:</p>
-            <ul>
-                <li>Mengakses data pribadi yang kami simpan.</li>
-                <li>Meminta penghapusan akun dan data (Right to be Forgotten).</li>
-                <li>Mengekspor data kontak dan riwayat chat Anda.</li>
-            </ul>
-
-            <h3>6. Hubungi Kami</h3>
-            <p>Jika ada pertanyaan mengenai privasi ini, silakan hubungi kami di <a href="mailto:privacy@kolaksi.id">privacy@kolaksi.id</a>.</p>
         </div>
     </div>
 
