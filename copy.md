@@ -26,7 +26,7 @@
 3.  **Mulai Closing:** Pantau performa, broadcast promo, dan liat omzet naik.
 
 ## Footer
-**Company:** PT Generasi Izzah Indonesia
+**Company:** Generasi Izzah Indonesia
 **Links:** Instagram | Privacy Policy
 **Contact:** [Alamat & No Telp Placeholder]
-**Copyright:** © 2026 PT Generasi Izzah Indonesia. All rights reserved.
+**Copyright:** © 2026 Generasi Izzah Indonesia. All rights reserved.
