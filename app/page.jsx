@@ -212,10 +212,10 @@ function ProblemCard({ problem, index }) {
   const c = colorMap[problem.color];
 
   return (
-    <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-brand-900/5 hover:-translate-y-1 transition-all duration-300 group overflow-hidden relative">
+    <div className="p-5 sm:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-brand-900/5 hover:-translate-y-1 transition-all duration-300 group overflow-hidden relative">
       <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${c.border} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`} />
 
-      <div className="mb-8 bg-slate-50 border border-slate-100 rounded-xl p-4 w-full select-none transform group-hover:scale-[1.02] transition-transform duration-500 relative h-36 flex items-center justify-center overflow-hidden">
+      <div className="mb-5 sm:mb-8 bg-slate-50 border border-slate-100 rounded-xl p-3 sm:p-4 w-full select-none transform group-hover:scale-[1.02] transition-transform duration-500 relative h-28 sm:h-36 flex items-center justify-center overflow-hidden">
         {index === 0 && (
           <div className="w-full space-y-3">
             <div className="flex justify-between items-center opacity-30 blur-[0.5px]">
@@ -270,10 +270,10 @@ function ProblemCard({ problem, index }) {
         )}
       </div>
 
-      <h3 className={`text-xl font-bold text-slate-900 mb-3 ${c.hover} transition-colors flex items-center gap-2`}>
-        <span className="text-2xl">{problem.icon}</span> {problem.title}
+      <h3 className={`text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 ${c.hover} transition-colors flex items-center gap-2`}>
+        <span className="text-xl sm:text-2xl">{problem.icon}</span> {problem.title}
       </h3>
-      <p className="text-slate-600 leading-relaxed text-sm">{problem.description}</p>
+      <p className="text-slate-600 leading-relaxed text-xs sm:text-sm">{problem.description}</p>
     </div>
   );
 }
@@ -295,7 +295,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+        <section className="pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
             <div className="absolute top-20 left-10 w-72 h-72 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
             <div className="absolute top-20 right-10 w-72 h-72 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
@@ -303,80 +303,80 @@ export default function Home() {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-sm font-medium">
+                <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs sm:text-sm font-medium">
                     <WhatsAppIcon className="w-4 h-4 text-emerald-500" />
                     CRM WhatsApp Official
                   </div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs sm:text-sm font-medium">
                     <InstagramIcon className="w-4 h-4 text-pink-500" />
                     Instagram DM
                     <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
                   </div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs sm:text-sm font-medium">
                     <MessengerIcon className="w-4 h-4 text-blue-500" />
                     FB Messenger
                     <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
                   </div>
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 sm:mb-6 leading-tight">
                   Kelola{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500">WhatsApp Bisnis</span>
                   {" "}dalam Satu Platform
                 </h1>
 
-                <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-xl leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 max-w-xl leading-relaxed">
                   Lead masuk tapi respon lambat? Tim CS berantakan? Broadcast bikin takut keblokir? Kolaksi bantu satukan semua chat, tim, dan data pelanggan di satu dashboard.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                  <a href="#daftar" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
-                    <UserPlus size={20} />
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
+                  <a href="#daftar" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
+                    <UserPlus size={18} className="sm:w-5 sm:h-5" />
                     Coba Gratis Sekarang
                   </a>
-                  <a href="#fitur" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-slate-700 border border-slate-200 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all">
+                  <a href="#fitur" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-slate-700 border border-slate-200 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all">
                     Lihat Fitur
-                    <ArrowRight size={18} />
+                    <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
                   </a>
                 </div>
 
-                <p className="text-sm text-slate-500 mt-4 flex items-center gap-1">
-                  <CheckCircle2 size={16} className="text-emerald-600" />
+                <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4 flex items-center gap-1">
+                  <CheckCircle2 size={14} className="text-emerald-600 sm:w-4 sm:h-4" />
                   Gratis daftar — setup cuma 5 menit
                 </p>
               </div>
 
-              <div className="relative">
+              <div className="relative hidden sm:block">
                 <DashboardMockup />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-white border-y border-slate-100">
+        <section className="py-10 sm:py-16 bg-white border-y border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
               {statsBar.map((s) => (
                 <div key={s.label} className="text-center">
-                  <div className="text-3xl md:text-4xl font-extrabold text-brand-600">{s.value}</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">{s.label}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-600">{s.value}</div>
+                  <div className="text-xs sm:text-sm text-slate-500 font-medium mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-slate-50">
+        <section className="py-14 sm:py-20 lg:py-24 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 Testimoni
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Dipercaya oleh Ratusan UMKM di Indonesia</h2>
-              <p className="text-slate-600 text-lg">Ini kata mereka yang udah coba Kolaksi dan ngerasain bedanya.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Dipercaya oleh Ratusan UMKM di Indonesia</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Ini kata mereka yang udah coba Kolaksi dan ngerasain bedanya.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t) => (
@@ -400,21 +400,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Masalah yang Sering Terjadi</h2>
-            <p className="text-slate-600 text-lg leading-relaxed">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">Masalah yang Sering Terjadi</h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
               Chat tumpuk di satu HP, CS saling tumpang tindih, lead panas kelewat. Respon lambat, pelanggan kabur, omset melayang.
             </p>
-            <p className="text-brand-600 text-lg leading-relaxed mt-4 font-bold">
+            <p className="text-brand-600 text-base sm:text-lg leading-relaxed mt-3 sm:mt-4 font-bold">
               Kolaksi ngatasin 3 masalah utama ini.
             </p>
           </div>
         </section>
 
-        <section className="pb-24 bg-white">
+        <section className="pb-16 sm:pb-20 lg:pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {problems.map((p, i) => (
                 <ProblemCard key={p.title} problem={p} index={i} />
               ))}
@@ -422,15 +422,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="fitur" className="py-24 bg-white relative overflow-hidden">
+        <section id="fitur" className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#444cf7_1px,transparent_1px)] [background-size:16px_16px]" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 Fitur
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">9 Fitur untuk Kelola WhatsApp Bisnis</h2>
-              <p className="text-slate-600 text-lg">Semua yang kamu butuhkan untuk mengelola komunikasi pelanggan dalam satu platform.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">9 Fitur untuk Kelola WhatsApp Bisnis</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Semua yang kamu butuhkan untuk mengelola komunikasi pelanggan dalam satu platform.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((f) => {
@@ -469,33 +469,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-brand-50 border-y border-brand-100">
+        <section className="py-12 sm:py-16 bg-brand-50 border-y border-brand-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Udah liat fiturnya? Langsung coba.</h3>
-            <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">Udah liat fiturnya? Langsung coba.</h3>
+            <p className="text-slate-600 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
               Daftar gratis, setup cuma 5 menit. Nggak perlu kartu kredit, nggak ada komitmen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5">
-                <UserPlus size={20} />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5">
+                <UserPlus size={18} className="sm:w-5 sm:h-5" />
                 Coba Gratis Sekarang
               </a>
-              <a href="#harga" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-slate-700 border border-slate-200 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all">
+              <a href="#harga" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-slate-700 border border-slate-200 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all">
                 Lihat Harga
-                <ArrowRight size={18} />
+                <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
             </div>
           </div>
         </section>
 
-        <section className="py-24 bg-slate-50">
+        <section className="py-16 sm:py-20 lg:py-24 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 Contoh Penggunaan
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Cocok untuk Berbagai Bisnis UMKM</h2>
-              <p className="text-slate-600 text-lg">Selama pelanggan banyak bertanya lewat WhatsApp, Kolaksi siap membantu.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Cocok untuk Berbagai Bisnis UMKM</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Selama pelanggan banyak bertanya lewat WhatsApp, Kolaksi siap membantu.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {useCases.map((item) => (
@@ -513,14 +513,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="harga" className="py-24 bg-white">
+        <section id="harga" className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 Harga
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Pilih Paket yang Cocok</h2>
-              <p className="text-slate-600 text-lg">Mulai gratis, upgrade kapan saja sesuai kebutuhan bisnis kamu.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Pilih Paket yang Cocok</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Mulai gratis, upgrade kapan saja sesuai kebutuhan bisnis kamu.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {pricing.map((plan) => (
@@ -550,28 +550,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" className="py-24 bg-slate-50">
+        <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-slate-50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 FAQ
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Pertanyaan yang Sering Ditanyakan</h2>
-              <p className="text-slate-600 text-lg">Semua yang perlu kamu tahu sebelum mulai menggunakan Kolaksi.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Pertanyaan yang Sering Ditanyakan</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Semua yang perlu kamu tahu sebelum mulai menggunakan Kolaksi.</p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-white rounded-xl border border-slate-100 overflow-hidden shadow-sm">
                   <details className="group">
-                    <summary className="w-full flex items-center justify-between p-6 cursor-pointer list-none">
-                      <div className="flex items-center gap-3">
-                        <HelpCircle size={20} className="text-brand-600 flex-shrink-0" />
-                        <span className="font-bold text-slate-900 text-sm">{faq.question}</span>
+                    <summary className="w-full flex items-center justify-between p-4 sm:p-6 cursor-pointer list-none">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <HelpCircle size={18} className="text-brand-600 flex-shrink-0 sm:w-5 sm:h-5" />
+                        <span className="font-bold text-slate-900 text-xs sm:text-sm">{faq.question}</span>
                       </div>
-                      <ChevronDown size={18} className="text-slate-400 group-open:rotate-180 transition-transform" />
+                      <ChevronDown size={16} className="text-slate-400 group-open:rotate-180 transition-transform sm:w-[18px] sm:h-[18px]" />
                     </summary>
-                    <div className="px-6 pb-6 pl-14">
-                      <p className="text-slate-600 text-sm leading-relaxed">{faq.answer}</p>
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6 pl-10 sm:pl-14">
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{faq.answer}</p>
                     </div>
                   </details>
                 </div>
@@ -580,65 +580,65 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="daftar" className="py-20 bg-brand-900 relative overflow-hidden">
+        <section id="daftar" className="py-14 sm:py-20 bg-brand-900 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Yuk, Mulai Kelola WhatsApp Bisnis dengan Lebih Rapi</h2>
-            <p className="text-brand-100 text-lg mb-10 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Yuk, Mulai Kelola WhatsApp Bisnis dengan Lebih Rapi</h2>
+            <p className="text-brand-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
               Daftar gratis, tim kami bantu onboarding. Setup cuma 5 menit, nggak perlu kartu kredit.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-brand-900 transition-all duration-200 bg-white rounded-xl hover:bg-brand-50 hover:shadow-lg">
-                <UserPlus size={20} />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+              <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-brand-900 transition-all duration-200 bg-white rounded-xl hover:bg-brand-50 hover:shadow-lg">
+                <UserPlus size={18} className="sm:w-5 sm:h-5" />
                 Mulai Gratis Sekarang
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-white/80">
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-400" />Gratis 14 hari</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-400" />Tanpa kartu kredit</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-400" />Cancel kapan saja</span>
+            <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-white/80">
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Gratis 14 hari</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Tanpa kartu kredit</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Cancel kapan saja</span>
             </div>
           </div>
         </section>
       </main>
 
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] p-4">
-        <div className="flex gap-3">
-          <a href="https://wa.me/6285177854195" target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-emerald-700 border border-emerald-200 rounded-xl hover:bg-emerald-50 transition-all">
-            <WhatsAppIcon className="w-5 h-5" />
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] p-3">
+        <div className="flex gap-2">
+          <a href="https://wa.me/6285177854195" target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-xs font-bold text-emerald-700 border border-emerald-200 rounded-lg hover:bg-emerald-50 transition-all">
+            <WhatsAppIcon className="w-4 h-4" />
             Hubungi
           </a>
-          <a href="https://app.kolaksi.id" className="flex-[2] inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white bg-brand-600 rounded-xl hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/20">
-            <UserPlus size={18} />
+          <a href="https://app.kolaksi.id" className="flex-[2] inline-flex items-center justify-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-brand-600 rounded-lg hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/20">
+            <UserPlus size={14} />
             Daftar Gratis
           </a>
         </div>
       </div>
 
-      <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800 pb-24 md:pb-16">
+      <footer className="bg-slate-900 text-slate-300 py-10 sm:py-16 border-t border-slate-800 pb-24 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3 mb-12 pb-8 border-b border-slate-800">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
-              <ShieldCheck size={16} className="text-emerald-400" />
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 pb-6 sm:pb-8 border-b border-slate-800">
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
+              <ShieldCheck size={14} className="text-emerald-400 sm:w-4 sm:h-4" />
               WhatsApp Business API Resmi
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
-              <BadgeCheck size={16} className="text-brand-400" />
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
+              <BadgeCheck size={14} className="text-brand-400 sm:w-4 sm:h-4" />
               Data Terenkripsi
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
-              <Star size={16} className="text-amber-400 fill-amber-400" />
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
+              <Star size={14} className="text-amber-400 fill-amber-400 sm:w-4 sm:h-4" />
               4.8/5 dari 50+ Pengguna
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <div className="space-y-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-12 mb-8 sm:mb-12">
+            <div className="space-y-4 col-span-2 sm:col-span-2 lg:col-span-1">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-brand-900/50">K</div>
                 <span className="text-xl font-bold text-white tracking-tight">Kolaksi</span>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed">Platform CRM WhatsApp Official yang membantu UMKM meningkatkan konversi penjualan dan manajemen tim CS tanpa takut blokir.</p>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Platform CRM WhatsApp Official yang membantu UMKM meningkatkan konversi penjualan dan manajemen tim CS tanpa takut blokir.</p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-6">Produk</h4>
