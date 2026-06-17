@@ -1,0 +1,52 @@
+# Kolaksi
+
+> Kolaksi adalah CRM WhatsApp Official untuk UMKM Indonesia. Kolaksi membantu bisnis mengelola semua chat WhatsApp dalam satu inbox terpadu, membalas pelanggan secara otomatis dengan AI Chatbot 24 jam, dan berkolaborasi bersama tim CS dalam satu dashboard. Kolaksi menggunakan WhatsApp Business API resmi dari Meta.
+
+## Ringkasan
+
+- Nama produk: Kolaksi
+- Kategori: CRM WhatsApp / Platform layanan pelanggan omnichannel
+- Untuk: UMKM, toko online, dan bisnis di Indonesia
+- Perusahaan: Generasi Izzah Indonesia
+- Website: https://kolaksi.id
+- Aplikasi: https://app.kolaksi.id
+- Kontak: hello@kolaksi.id | WhatsApp +62 851-7785-4195
+- Bahasa: Indonesia
+- Mulai: Gratis selamanya, tanpa kartu kredit
+
+## Fitur Utama
+
+- Inbox Terpadu: semua pesan WhatsApp masuk ke satu dashboard, tim bisa membalas dari mana saja.
+- AI Chatbot Otomatis: membalas pertanyaan pelanggan 24 jam berdasarkan dokumen pengetahuan yang diajarkan (produk, harga, FAQ). Agen manusia bisa mengambil alih kapan saja.
+- Multi-Agent: undang staf CS, assign percakapan, dan kolaborasi tanpa rebutan HP.
+- Dokumen Pengetahuan: melatih AI dengan katalog produk, harga, FAQ, dan SOP.
+- API & Webhook: integrasi otomatis dengan sistem toko online, n8n, dan Zapier.
+- Quick Reply: template jawaban siap pakai untuk pertanyaan yang sering muncul.
+- Label & Assignment: organisasi percakapan dan penugasan ke CS tertentu.
+- WhatsApp Business API resmi dari Meta: nomor lebih aman dan profesional.
+- Riwayat percakapan tersimpan hingga 30 hari (paket berbayar).
+- Segera hadir: Instagram DM dan Facebook Messenger dalam satu inbox.
+
+## Paket dan Harga
+
+- FREE — Gratis selamanya: 1 nomor WhatsApp, inbox terpadu, riwayat pesan 7 hari. Tanpa kartu kredit.
+- BASIC — Rp 39.000/bulan: 2 nomor WhatsApp, 2 anggota tim, riwayat 30 hari, API Access & Webhook.
+- LITE — Rp 99.000/bulan (paling populer): 3 nomor WhatsApp, 5 anggota tim, AI Chatbot otomatis, 1.000 balasan AI/bulan, 5 dokumen pengetahuan.
+- PRO — Rp 199.000/bulan: 5 nomor WhatsApp, 10 anggota tim, 5 AI Chatbot, 5.000 balasan AI/bulan, 20 dokumen pengetahuan.
+
+Langganan tahunan hemat sampai 20% (setara 2,4 bulan gratis). Tanpa kontrak, bisa upgrade/downgrade kapan saja, dan sisa langganan dihitung sebagai kredit saat upgrade. Pembayaran via QRIS, Transfer Bank (BCA, BNI, Mandiri, Permata), dan E-Wallet.
+
+## Pertanyaan Umum
+
+- Apakah perlu kartu kredit untuk mulai? Tidak. Paket FREE gratis selamanya dan langsung bisa dipakai tanpa kartu kredit.
+- Apakah ada kontrak? Tidak ada kontrak. Paket bulanan bisa dihentikan kapan saja.
+- Berapa nomor WhatsApp yang bisa dihubungkan? FREE (1), BASIC (2), LITE (3), PRO (5), menggunakan WhatsApp Business API resmi dari Meta.
+- Apakah AI Chatbot mendukung Bahasa Indonesia? Ya, sepenuhnya mendukung Bahasa Indonesia.
+- Apa itu balasan AI? Setiap balasan otomatis dari AI ke pelanggan dihitung 1 balasan. LITE termasuk 1.000/bulan, PRO 5.000/bulan.
+
+## Tautan Penting
+
+- Beranda: https://kolaksi.id
+- Daftar / Aplikasi: https://app.kolaksi.id
+- Kebijakan Privasi: https://kolaksi.id/privacy
+- Syarat & Ketentuan: https://kolaksi.id/terms

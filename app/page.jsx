@@ -367,6 +367,32 @@ export default function Home() {
     }))
   };
 
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Kolaksi",
+    legalName: "Generasi Izzah Indonesia",
+    url: "https://kolaksi.id",
+    logo: "https://kolaksi.id/favicon.svg",
+    description: "CRM WhatsApp Official untuk UMKM Indonesia: inbox terpadu, AI Chatbot otomatis, dan kolaborasi tim CS dengan WhatsApp Business API resmi.",
+    email: "hello@kolaksi.id",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+62-851-7785-4195",
+      email: "hello@kolaksi.id",
+      contactType: "customer support",
+      availableLanguage: ["Indonesian"]
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Jalan Raya Panggung No 3, Jatibening, Pondok Gede",
+      addressLocality: "Bekasi",
+      addressRegion: "Jawa Barat",
+      postalCode: "17412",
+      addressCountry: "ID"
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -589,6 +615,44 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="cara-mulai" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-brand-50 to-indigo-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-brand-700 text-xs font-bold uppercase tracking-wide mb-4 border border-brand-100">
+                Cara Mulai
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Mulai Pakai Kolaksi dalam 3 Langkah</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Tanpa ribet, tanpa kartu kredit. Bisnis kamu siap balas pelanggan lebih cepat hari ini juga.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: UserPlus, step: "1", title: "Daftar Gratis", text: "Buat akun Kolaksi dalam hitungan menit. Mulai dari paket FREE, tanpa kartu kredit." },
+                { icon: WhatsAppIcon, step: "2", title: "Hubungkan WhatsApp", text: "Sambungkan nomor WhatsApp bisnis kamu lewat WhatsApp Business API resmi dari Meta." },
+                { icon: Zap, step: "3", title: "Balas & Otomasi", text: "Balas chat dari satu inbox, ajari AI Chatbot, dan undang tim CS untuk kolaborasi." },
+              ].map((s) => {
+                const Icon = s.icon;
+                return (
+                  <div key={s.step} className="relative p-6 sm:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div className="absolute -top-3 -left-3 w-9 h-9 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shadow-lg shadow-brand-600/30">{s.step}</div>
+                    <div className="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6" size={24} />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-2">{s.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{s.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="text-center mt-10">
+              <a href="https://app.kolaksi.id" className="inline-flex items-center justify-center gap-2 px-7 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5">
+                <UserPlus size={18} className="sm:w-5 sm:h-5" />
+                Mulai Gratis Sekarang
+              </a>
+              <p className="text-xs sm:text-sm text-slate-500 mt-3">Gratis selamanya • Tanpa kartu kredit • Upgrade kapan saja</p>
+            </div>
+          </div>
+        </section>
+
         <section id="harga" className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -633,6 +697,83 @@ export default function Home() {
               <span className="inline-flex items-center gap-1.5"><CheckCircle2 size={15} className="text-emerald-500" />Upgrade/downgrade kapan saja</span>
               <span className="inline-flex items-center gap-1.5"><CheckCircle2 size={15} className="text-emerald-500" />Sisa langganan jadi kredit saat upgrade</span>
             </div>
+
+            <div className="mt-12 sm:mt-16 max-w-5xl mx-auto">
+              <h3 className="text-center text-lg sm:text-xl font-bold text-slate-900 mb-6">Perbandingan Lengkap Paket Kolaksi</h3>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                <table className="w-full text-sm text-left border-collapse bg-white">
+                  <caption className="sr-only">Perbandingan fitur dan harga paket Kolaksi: FREE, BASIC, LITE, dan PRO.</caption>
+                  <thead>
+                    <tr className="bg-slate-50 border-b border-slate-200">
+                      <th scope="col" className="p-3 sm:p-4 font-bold text-slate-700">Fitur</th>
+                      <th scope="col" className="p-3 sm:p-4 font-bold text-slate-700 text-center">FREE</th>
+                      <th scope="col" className="p-3 sm:p-4 font-bold text-slate-700 text-center">BASIC</th>
+                      <th scope="col" className="p-3 sm:p-4 font-bold text-brand-700 text-center bg-brand-50">LITE</th>
+                      <th scope="col" className="p-3 sm:p-4 font-bold text-slate-700 text-center">PRO</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-slate-600">
+                    {[
+                      ["Harga per bulan", "Gratis", "Rp 39.000", "Rp 99.000", "Rp 199.000"],
+                      ["Nomor WhatsApp", "1", "2", "3", "5"],
+                      ["Anggota tim", "—", "2 orang", "5 orang", "10 orang"],
+                      ["AI Chatbot otomatis", "❌", "❌", "✅", "✅"],
+                      ["Balasan AI per bulan", "—", "—", "1.000", "5.000"],
+                      ["Dokumen pengetahuan", "—", "—", "5", "20"],
+                      ["Riwayat pesan", "7 hari", "30 hari", "30 hari", "30 hari"],
+                      ["API & Webhook", "❌", "✅", "✅", "✅"],
+                    ].map((row, ri) => (
+                      <tr key={row[0]} className={`border-b border-slate-100 ${ri === 0 ? "font-semibold text-slate-900" : ""}`}>
+                        <th scope="row" className="p-3 sm:p-4 font-medium text-slate-700 text-left">{row[0]}</th>
+                        <td className="p-3 sm:p-4 text-center">{row[1]}</td>
+                        <td className="p-3 sm:p-4 text-center">{row[2]}</td>
+                        <td className="p-3 sm:p-4 text-center bg-brand-50/50">{row[3]}</td>
+                        <td className="p-3 sm:p-4 text-center">{row[4]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-center text-xs text-slate-500 mt-4">Semua paket menggunakan WhatsApp Business API resmi dari Meta. Langganan tahunan hemat sampai 20%.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="tentang" className="py-14 sm:py-20 bg-white border-t border-slate-100">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
+              Tentang Kolaksi
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">Apa itu Kolaksi?</h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              <strong className="text-slate-900">Kolaksi adalah CRM WhatsApp Official untuk UMKM Indonesia</strong> — satu platform untuk menyatukan semua chat WhatsApp di inbox terpadu, membalas pelanggan otomatis dengan AI Chatbot 24 jam, dan mengelola tim CS dalam satu dashboard, menggunakan WhatsApp Business API resmi dari Meta.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mt-8">
+              {[
+                { icon: Users, label: "Untuk siapa", value: "UMKM, toko online, kuliner, jasa & klinik" },
+                { icon: BadgeCheck, label: "Harga", value: "Mulai gratis selamanya — Rp 39rb s/d 199rb/bln" },
+                { icon: ShieldCheck, label: "Teknologi", value: "WhatsApp Business API resmi dari Meta" },
+                { icon: Zap, label: "Keunggulan", value: "AI Chatbot balas pelanggan otomatis 24 jam" },
+              ].map((f) => {
+                const Icon = f.icon;
+                return (
+                  <div key={f.label} className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <div className="w-9 h-9 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0">
+                      <Icon size={18} />
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-wide text-slate-400">{f.label}</div>
+                      <div className="text-sm font-semibold text-slate-800 mt-0.5">{f.value}</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <p className="text-slate-500 text-sm leading-relaxed mt-6">
+              Fitur utama: inbox terpadu, AI Chatbot dengan dokumen pengetahuan, multi-agent untuk tim CS, Quick Reply, label &amp; assignment, serta API &amp; Webhook untuk integrasi dengan toko online, n8n, dan Zapier. Integrasi Instagram DM dan Facebook Messenger akan segera hadir. Kolaksi dikembangkan oleh Generasi Izzah Indonesia.
+            </p>
           </div>
         </section>
 
@@ -714,7 +855,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
               <Star size={14} className="text-amber-400 fill-amber-400 sm:w-4 sm:h-4" />
-              4.8/5 dari 50+ Pengguna
+              4.8/5 dari 30+ Pengguna
             </div>
           </div>
 
@@ -724,7 +865,7 @@ export default function Home() {
                 <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-brand-900/50">K</div>
                 <span className="text-xl font-bold text-white tracking-tight">Kolaksi</span>
               </div>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Platform CRM WhatsApp Official yang membantu UMKM meningkatkan konversi penjualan dan manajemen tim CS tanpa takut blokir.</p>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Platform CRM WhatsApp Official yang membantu UMKM menyatukan chat di satu inbox, membalas pelanggan otomatis dengan AI Chatbot, dan mengelola tim CS dengan WhatsApp Business API resmi.</p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-6">Produk</h4>
@@ -766,6 +907,7 @@ export default function Home() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
     </>
   );
 }
