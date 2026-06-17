@@ -741,13 +741,15 @@ export default function Home() {
 
         <section id="tentang" className="py-14 sm:py-20 bg-white border-t border-slate-100">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
-              Tentang Kolaksi
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
+                Tentang Kolaksi
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">Apa itu Kolaksi?</h2>
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+                <strong className="text-slate-900">Kolaksi adalah CRM WhatsApp Official untuk UMKM Indonesia</strong> — satu platform untuk menyatukan semua chat WhatsApp di inbox terpadu, membalas pelanggan otomatis dengan AI Chatbot 24 jam, dan mengelola tim CS dalam satu dashboard, menggunakan WhatsApp Business API resmi dari Meta.
+              </p>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">Apa itu Kolaksi?</h2>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              <strong className="text-slate-900">Kolaksi adalah CRM WhatsApp Official untuk UMKM Indonesia</strong> — satu platform untuk menyatukan semua chat WhatsApp di inbox terpadu, membalas pelanggan otomatis dengan AI Chatbot 24 jam, dan mengelola tim CS dalam satu dashboard, menggunakan WhatsApp Business API resmi dari Meta.
-            </p>
 
             <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mt-8">
               {[
@@ -771,7 +773,7 @@ export default function Home() {
               })}
             </div>
 
-            <p className="text-slate-500 text-sm leading-relaxed mt-6">
+            <p className="text-center text-slate-500 text-sm leading-relaxed mt-6">
               Fitur utama: inbox terpadu, AI Chatbot dengan dokumen pengetahuan, multi-agent untuk tim CS, Quick Reply, label &amp; assignment, serta API &amp; Webhook untuk integrasi dengan toko online, n8n, dan Zapier. Integrasi Instagram DM dan Facebook Messenger akan segera hadir. Kolaksi dikembangkan oleh Generasi Izzah Indonesia.
             </p>
           </div>
