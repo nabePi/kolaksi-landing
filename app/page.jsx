@@ -344,11 +344,27 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Kolaksi",
+    url: "https://kolaksi.id",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "IDR" },
+    offers: [
+      { "@type": "Offer", name: "FREE", price: "0", priceCurrency: "IDR" },
+      { "@type": "Offer", name: "BASIC", price: "39000", priceCurrency: "IDR" },
+      { "@type": "Offer", name: "LITE", price: "99000", priceCurrency: "IDR" },
+      { "@type": "Offer", name: "PRO", price: "199000", priceCurrency: "IDR" }
+    ],
     description: "CRM WhatsApp Official untuk UMKM. Kelola chat di inbox terpadu, balas pelanggan otomatis dengan AI chatbot, dan kolaborasi tim CS dalam satu dashboard.",
     author: { "@type": "Organization", name: "Generasi Izzah Indonesia", url: "https://kolaksi.id" }
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer }
+    }))
   };
 
   return (
@@ -749,6 +765,7 @@ export default function Home() {
       </footer>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </>
   );
 }
