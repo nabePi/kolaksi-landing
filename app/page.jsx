@@ -663,7 +663,7 @@ export default function Home() {
               <p className="text-slate-600 text-base sm:text-lg">Mulai gratis, upgrade kapan saja sesuai kebutuhan bisnis kamu.</p>
               <div className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs sm:text-sm font-semibold">
                 <BadgeCheck size={16} className="flex-shrink-0" />
-                Hemat sampai 20% dengan langganan tahunan — setara 2,4 bulan gratis
+                Hemat sampai 20% dengan langganan tahunan — setara 2 bulan gratis
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
