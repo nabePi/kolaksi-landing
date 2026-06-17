@@ -4,22 +4,21 @@ import Navbar, { WhatsAppIcon, InstagramIcon, MessengerIcon } from "./components
 import {
   ArrowRight,
   BadgeCheck,
-  BarChart3,
   Check,
   CheckCircle2,
   ChevronDown,
   Database,
   HelpCircle,
+  History,
   Inbox,
   Layers3,
   LogIn,
   Menu,
   MessageCircle,
-  Radio,
-  Send,
-  ShieldAlert,
   ShieldCheck,
   Star,
+  Tag,
+  Send,
   UserPlus,
   Users,
   Workflow,
@@ -28,175 +27,230 @@ import {
 } from "lucide-react";
 
 const statsBar = [
-  { value: "50+", label: "UMKM Aktif" },
-  { value: "10rb+", label: "Chat Terkelola" },
+  { value: "30+", label: "UMKM Aktif" },
+  { value: "2.000+", label: "Chat Terkelola" },
   { value: "3x", label: "Lebih Cepat Respon" },
   { value: "4.8/5", label: "Rating Pengguna" }
 ];
 
 const problems = [
   {
-    title: "Chat Tenggelam",
+    title: "Chat Numpuk, Nggak Ada yang Balas",
     icon: "📉",
     color: "red",
-    description: "Chat masuk terlalu banyak, lead potensial kelewat nggak dibales. Customer kabur ke kompetitor gara-gara slow response.",
+    description: "Pesan masuk dari banyak pelanggan tapi cuma dikelola dari satu HP. Lead potensial kelewat karena respon lambat.",
   },
   {
-    title: "CS 'Hantu'",
-    icon: "👻",
+    title: "Tim CS Nggak Bisa Kolaborasi",
+    icon: "👥",
     color: "orange",
-    description: "Nggak tau CS mana yang rajin, mana yang cuma read doang. Owner susah evaluasi tim soalnya nggak ada data.",
+    description: "Staf CS nggak bisa akses chat yang sama sekaligus. Pesan sering dobel dibalas atau malah nggak dibalas sama sekali.",
   },
   {
-    title: "Takut Keblokir",
-    icon: "🚫",
+    title: "Pertanyaan Sama Berulang Terus",
+    icon: "🔁",
     color: "slate",
-    description: "Broadcast promo pakai tool ilegal, besoknya nomor hangus dibanned WA. Database hilang, omset melayang.",
+    description: "CS habis waktu jawab pertanyaan yang itu-itu lagi: harga, stok, cara order. Padahal bisa diotomasi dengan AI.",
   },
 ];
 
 const features = [
-  { icon: MessageCircle, title: "Unified Inbox", text: "Semua chat dari berbagai sumber masuk ke satu inbox. Gak perlu buka banyak app, semua terpusat." },
-  { icon: Radio, title: "Broadcast WhatsApp", text: "Kirim promo, pengumuman, atau follow-up ke banyak pelanggan sekaligus dengan template resmi yang aman." },
-  { icon: Database, title: "CRM & Kontak", text: "Kelola data pelanggan, tag, segment, dan history chat. Semua rapi di satu tempat, siap dipakai kapan saja." },
-  { icon: BarChart3, title: "Analytics & Report", text: "Lihat statistik chat, waktu respon, dan performa tim dalam bentuk laporan yang mudah dipahami." },
-  { icon: Zap, title: "Auto Reply", text: "Atur balasan otomatis untuk jam di luar kerja atau pertanyaan yang sering muncul. Pelanggan tetap dilayani 24/7." },
-  { icon: ShieldCheck, title: "Nomor Aman & Resmi", text: "Pakai jalur resmi WhatsApp Business API. Nomor lebih terjaga, nggak gampang diblokir, dan lebih profesional." },
-  { icon: Send, title: "Message Templates", text: "Kirim template WhatsApp untuk notifikasi, follow-up, reminder, dan campaign dengan format yang lebih konsisten." },
-  { icon: Inbox, title: "Quick Reply", text: "Balas chat cepat dengan jawaban siap pakai. CS nggak perlu ngetik ulang jawaban yang sama berkali-kali." },
-  { icon: Workflow, title: "Label & Assignment", text: "Atur label pelanggan dan assign chat ke CS tertentu. Kerja tim jadi lebih terstruktur dan nggak bertumpuk." },
+  { icon: MessageCircle, title: "Inbox Terpadu", text: "Semua pesan WhatsApp masuk ke satu dashboard. Tim bisa balas dari mana saja tanpa perlu pegang HP bersama." },
+  { icon: Users, title: "Multi-Agent", text: "Undang staf CS ke platform. Assign percakapan ke anggota tim tertentu dan pantau siapa yang sedang handle pelanggan." },
+  { icon: Zap, title: "AI Chatbot Otomatis", text: "Balas pertanyaan pelanggan secara otomatis 24/7 berdasarkan pengetahuan yang kamu ajarkan. Kamu tetap bisa ambil alih kapan saja." },
+  { icon: Database, title: "Dokumen Pengetahuan", text: "Upload daftar produk, harga, FAQ, atau SOP bisnis kamu. AI akan belajar dari dokumen ini untuk menjawab pelanggan." },
+  { icon: Workflow, title: "API & Webhook", text: "Kirim pesan otomatis dari sistem toko online kamu saat ada order baru, pembayaran, atau pengiriman. Integrasi dengan n8n dan Zapier." },
+  { icon: Inbox, title: "Quick Reply", text: "Simpan template jawaban untuk pertanyaan yang sering muncul. CS cukup pilih dan kirim — tidak perlu ngetik ulang." },
+  { icon: ShieldCheck, title: "WhatsApp Business API Resmi", text: "Terhubung langsung via jalur resmi Meta. Nomor lebih terjaga, tidak mudah diblokir, dan tampil lebih profesional." },
+  { icon: History, title: "Riwayat Percakapan", text: "Akses histori chat pelanggan hingga 30 hari ke belakang. Tidak perlu scroll HP — semua tersimpan di dashboard." },
+  { icon: Tag, title: "Label & Assignment", text: "Beri label pada percakapan dan assign ke CS tertentu. Kerja tim lebih terstruktur, tidak ada chat yang terlewat." },
 ];
 
 const pricing = [
-  { name: "FREE", price: "Rp 0", period: "selamanya", description: "Coba Kolaksi tanpa biaya. Cocok untuk solo founder yang mulai merapikan chat.", features: ["Connect WhatsApp, IG, Messenger", "Unlimited Message", "Akses Inbox", "Quick Reply"] },
-  { name: "BASIC", price: "Rp 25.000", period: "month", description: "Untuk tim kecil yang mulai kebanjiran chat dan butuh integrasi.", features: ["Semua fitur FREE", "n8n Integration", "API Access", "30-day message history", "1 WhatsApp Number"] },
-  { name: "LITE", price: "Rp 49.000", period: "month", description: "Untuk bisnis yang butuh AI chatbot, tim, dan manajemen konten.", featured: true, features: ["Semua fitur BASIC", "AI Chatbot", "5 Knowledge Documents", "n8n Integration", "5 Team Members", "90-day message history", "Media Library", "1 WhatsApp Number"] }
+  { name: "FREE", price: "Gratis", period: "selamanya", description: "Untuk Anda yang baru ingin mencoba atau bisnis yang baru mulai.", features: ["1 nomor WhatsApp", "Inbox terpadu", "Riwayat pesan 7 hari"] },
+  { name: "BASIC", price: "Rp 39.000", period: "bulan", annual: "Tahunan: Rp 31.200/bln (hemat 20%)", description: "Untuk usaha mikro atau solo founder yang butuh bantuan tim kecil.", features: ["Semua fitur FREE", "2 nomor WhatsApp", "2 anggota tim", "Riwayat pesan 30 hari", "API Access & Webhook"] },
+  { name: "LITE", price: "Rp 99.000", period: "bulan", annual: "Tahunan: Rp 79.200/bln (hemat 20%)", description: "Paling populer untuk UMKM yang ingin layanan pelanggan lebih cepat dengan AI.", featured: true, features: ["Semua fitur BASIC", "3 nomor WhatsApp", "5 anggota tim", "AI Chatbot otomatis", "1.000 balasan AI/bulan", "5 dokumen pengetahuan"] },
+  { name: "PRO", price: "Rp 199.000", period: "bulan", annual: "Tahunan: Rp 159.200/bln (hemat 20%)", description: "Untuk bisnis yang sudah punya tim dan butuh kapasitas lebih besar.", features: ["Semua fitur LITE", "5 nomor WhatsApp", "10 anggota tim", "5 AI Chatbot", "5.000 balasan AI/bulan", "20 dokumen pengetahuan"] },
 ];
 
 const testimonials = [
   { quote: "Kolaksi bantu tim saya balas chat 3x lebih cepat. Lead yang dulu kelewat sekarang jadi closing.", name: "Andi Wijaya", role: "Owner, Fashion Store Jakarta" },
   { quote: "Sebelumnya kami share 1 HP untuk 3 CS. Sekarang semua tim bisa kerja bareng tanpa tumpang tindih.", name: "Rina Susanti", role: "Manager, Wedding Organizer Bandung" },
-  { quote: "Broadcast promo lewat Kolaksi aman, nomor nggak pernah keblokir lagi. Database pelanggan tetap utuh.", name: "Budi Santoso", role: "Founder, Frozen Food Surabaya" }
+  { quote: "AI Chatbot-nya balas pertanyaan harga dan stok otomatis. CS saya sekarang fokus closing, bukan jawab pertanyaan yang sama terus.", name: "Budi Santoso", role: "Founder, Frozen Food Surabaya" }
 ];
 
 const useCases = [
-  { label: "Fashion", image: "/images/fashion.jpg", title: "Follow up ukuran, warna, dan repeat order tanpa tercecer." },
-  { label: "Wedding", image: "/images/wedding.jpg", title: "Kelola inquiry paket, DP, dan jadwal produksi dalam satu alur." },
-  { label: "Clinic", image: "/images/clinic.jpg", title: "Rapikan reservasi, reminder, dan konsultasi pelanggan." },
-  { label: "Frozen Food", image: "/images/frozen-food.jpg", title: "Kirim promo pelanggan lama dengan segmentasi yang jelas." },
-  { label: "Teknostore", image: "/images/teknostore.jpg", title: "Pantau komplain, status pesanan, dan after-sales produk." },
+  { label: "Fashion", image: "/images/fashion.jpg", title: "Balas tanya stok, ukuran, dan repeat order lebih cepat tanpa chat tercecer." },
+  { label: "Wedding", image: "/images/wedding.jpg", title: "Tim CS bisa kolaborasi balas inquiry, follow-up DP, dan konfirmasi jadwal dalam satu dashboard." },
+  { label: "Klinik & Kesehatan", image: "/images/clinic.jpg", title: "AI chatbot otomatis balas tanya jadwal dokter dan cara reservasi 24 jam." },
+  { label: "Frozen Food", image: "/images/frozen-food.jpg", title: "Kirim notifikasi order dan status pengiriman otomatis via API ke pelanggan." },
+  { label: "Toko Online", image: "/images/teknostore.jpg", title: "Hubungkan toko ke Kolaksi via API — pesan masuk, CS langsung bisa tangani dari satu tempat." },
 ];
 
 const faqs = [
-  { question: "Apakah pesan yang bisa dikirim unlimited?", answer: "Ya! Semua paket Kolaksi menyediakan unlimited pesan masuk dan keluar. Kamu bisa balas chat pelanggan sepuasnya tanpa khawatir kuota habis." },
-  { question: "Apakah bisa kirim broadcast / bulk message?", answer: "Bisa! Kolaksi mendukung fitur broadcast untuk mengirim pesan ke banyak pelanggan sekaligus. Cocok untuk promo, pengumuman, atau follow-up." },
-  { question: "Berapa biaya broadcast WhatsApp?", answer: "Biaya broadcast dibayar langsung ke Meta (WhatsApp) sesuai tarif resmi mereka. Kolaksi tidak mengambil margin tambahan. Kamu hanya bayar sesuai harga Meta." },
-  { question: "Apakah perlu nomor WhatsApp baru?", answer: "Tidak harus. Kamu bisa pakai nomor WhatsApp yang sudah ada, atau daftar nomor baru. Tim kami akan bantu proses migrasi jika diperlukan." },
-  { question: "Berapa lama proses setup?", answer: "Setup Kolaksi hanya butuh waktu singkat! Setelah verifikasi nomor selesai, kamu bisa langsung login, connect channel, dan mulai pakai." },
-  { question: "Apakah nomor tetap bisa dipakai di HP?", answer: "Dengan fitur WhatsApp Coexistence, nomor yang sama dapat tetap aktif di aplikasi WhatsApp dan dashboard Kolaksi. Owner tetap fleksibel membalas dari HP." }
+  { question: "Apakah perlu kartu kredit untuk mulai?", answer: "Tidak. Paket FREE gratis selamanya dan bisa langsung dipakai tanpa kartu kredit. Kamu baru bayar kalau memutuskan upgrade ke paket berbayar." },
+  { question: "Apakah bisa ganti paket kapan saja?", answer: "Bisa. Kamu bisa upgrade atau downgrade kapan saja dan langsung aktif. Jika ada sisa masa langganan, nilainya diperhitungkan sebagai kredit untuk paket baru." },
+  { question: "Apakah ada kontrak jangka panjang?", answer: "Tidak ada kontrak. Paket bulanan bisa dihentikan kapan saja. Paket tahunan aktif sampai masa berlakunya habis dan kamu hemat sampai 20%." },
+  { question: "Bagaimana cara pembayarannya?", answer: "Tersedia via QRIS, Transfer Bank (BCA, BNI, Mandiri, Permata), dan E-Wallet. Semua proses pembayaran ada di menu Billing dalam aplikasi." },
+  { question: "Apa itu AI Chatbot dan balasan AI?", answer: "AI Chatbot membalas pertanyaan pelanggan secara otomatis 24 jam berdasarkan informasi yang kamu ajarkan (produk, harga, FAQ). Setiap balasan otomatis dihitung 1 balasan AI. Paket LITE sudah termasuk 1.000 balasan/bulan, PRO 5.000 balasan/bulan. Kamu tetap bisa ambil alih percakapan kapan saja." },
+  { question: "AI Chatbot bisa Bahasa Indonesia?", answer: "Ya, AI sepenuhnya mendukung Bahasa Indonesia dan menyesuaikan gaya bahasa sesuai cara kamu mengajarkannya." },
+  { question: "Berapa nomor WhatsApp yang bisa dihubungkan?", answer: "Tergantung paket: FREE (1), BASIC (2), LITE (3), PRO (5). Setiap nomor menggunakan WhatsApp Business API resmi dari Meta, jadi lebih aman dan profesional." },
+  { question: "Kapan Instagram dan Facebook Messenger tersedia?", answer: "Integrasi Instagram DM dan Facebook Messenger sedang dalam pengembangan dan akan segera hadir dalam satu inbox bersama WhatsApp. Kami akan beri tahu saat fiturnya siap." }
 ];
 
 function DashboardMockup() {
   return (
     <div className="rounded-2xl shadow-2xl bg-white border border-slate-200 p-1.5 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500">
-      <div className="bg-slate-50 rounded-xl h-[400px] w-full flex overflow-hidden text-xs select-none ring-1 ring-slate-900/5">
-        <div className="w-16 bg-slate-900 flex flex-col items-center py-4 gap-4 flex-shrink-0">
-          <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold mb-4">K</div>
-          <div className="w-8 h-8 bg-slate-800 rounded-lg text-slate-400 flex items-center justify-center"><Layers3 size={16} /></div>
-          <div className="w-8 h-8 bg-slate-800/50 rounded-lg text-slate-500 flex items-center justify-center"><MessageCircle size={16} /></div>
-          <div className="w-8 h-8 bg-slate-800/50 rounded-lg text-slate-500 flex items-center justify-center"><Users size={16} /></div>
-          <div className="mt-auto w-8 h-8 rounded-full bg-indigo-500 border-2 border-slate-800" />
+      <div className="bg-white rounded-xl h-[400px] w-full flex flex-col overflow-hidden text-xs select-none ring-1 ring-slate-900/5">
+        <div className="h-7 bg-slate-100 border-b border-slate-200 flex items-center px-3 gap-2 flex-shrink-0">
+          <div className="flex gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+            <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
+          </div>
+          <div className="flex-1 flex justify-center">
+            <div className="bg-white border border-slate-200 rounded px-3 py-0.5 text-[9px] text-slate-400 flex items-center gap-1">
+              <ShieldCheck size={9} className="text-emerald-500" /> app.kolaksi.id/inbox
+            </div>
+          </div>
         </div>
 
-        <div className="w-64 bg-white border-r border-slate-200 flex flex-col">
-          <div className="p-3 border-b border-slate-100 bg-slate-50/50">
+        <div className="flex flex-1 overflow-hidden bg-slate-50">
+        <div className="w-14 bg-slate-900 flex flex-col items-center py-3 gap-3 flex-shrink-0">
+          <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold mb-2">K</div>
+          <div className="w-8 h-8 bg-brand-600/20 rounded-lg text-brand-400 flex items-center justify-center ring-1 ring-brand-500/40"><Layers3 size={15} /></div>
+          <div className="w-8 h-8 rounded-lg text-slate-500 hover:text-slate-300 flex items-center justify-center"><MessageCircle size={15} /></div>
+          <div className="w-8 h-8 rounded-lg text-slate-500 hover:text-slate-300 flex items-center justify-center"><Zap size={15} /></div>
+          <div className="w-8 h-8 rounded-lg text-slate-500 hover:text-slate-300 flex items-center justify-center"><Users size={15} /></div>
+          <div className="mt-auto w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-2 border-slate-800 flex items-center justify-center text-white text-[10px] font-bold">R</div>
+        </div>
+
+        <div className="w-60 bg-white border-r border-slate-200 flex flex-col">
+          <div className="p-3 border-b border-slate-100 bg-white">
             <div className="flex items-center justify-between mb-2">
-              <span className="font-bold text-slate-700">Chats</span>
-              <span className="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-[10px] font-bold">3 Unreplied</span>
+              <span className="font-bold text-slate-800 text-[13px]">Inbox Terpadu</span>
+              <span className="bg-red-100 text-red-600 px-1.5 py-0.5 rounded-full text-[10px] font-bold">2 Belum dibalas</span>
             </div>
-            <div className="bg-white border border-slate-200 rounded px-2 py-1.5 text-slate-400 flex items-center gap-2">
-              <span className="text-[10px]">Search...</span>
+            <div className="bg-slate-50 border border-slate-200 rounded-lg px-2 py-1.5 text-slate-400 flex items-center gap-2">
+              <span className="text-[10px]">Cari percakapan...</span>
             </div>
           </div>
           <div className="overflow-y-auto flex-1">
             {[
-              ["Budi Santoso", "Siap gan, saya transfer sekarang ya...", "Hot Lead", true],
-              ["Siti Aminah", "Min, paket promonya masih ada?", "Unreplied", false],
-              ["Toko Maju Jaya", "Oke makasih infonya min.", "", false],
-            ].map(([name, msg, tag, active]) => (
-              <div key={name} className={`p-3 border-l-2 ${active ? "border-brand-500 bg-brand-50" : "border-transparent hover:bg-slate-50"} cursor-pointer`}>
-                <div className="flex justify-between items-start mb-1">
-                  <span className="font-bold text-slate-800 text-[11px]">{name}</span>
-                  <span className="text-[10px] text-slate-400">10:42</span>
+              { name: "Budi Santoso", msg: "Siap, saya transfer sekarang ya...", initial: "B", color: "from-brand-400 to-indigo-500", tag: "Hot Lead", tagClass: "bg-amber-100 text-amber-700", handler: "Rina", handlerClass: "bg-indigo-100 text-indigo-600", active: true, unread: 0 },
+              { name: "Siti Aminah", msg: "Min, harga kaos polos berapa?", initial: "S", color: "from-pink-400 to-rose-500", tag: "Dibalas AI", tagClass: "bg-violet-100 text-violet-700", handler: "AI", handlerClass: "bg-violet-100 text-violet-600", active: false, unread: 1 },
+              { name: "Toko Maju Jaya", msg: "Oke makasih infonya 🙏", initial: "T", color: "from-emerald-400 to-teal-500", tag: "Selesai", tagClass: "bg-emerald-100 text-emerald-700", handler: "Dimas", handlerClass: "bg-indigo-100 text-indigo-600", active: false, unread: 0 },
+            ].map((c) => (
+              <div key={c.name} className={`p-3 border-l-2 ${c.active ? "border-brand-500 bg-brand-50" : "border-transparent hover:bg-slate-50"} cursor-pointer`}>
+                <div className="flex items-start gap-2.5">
+                  <div className="relative flex-shrink-0">
+                    <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${c.color} flex items-center justify-center text-white text-[11px] font-bold`}>{c.initial}</div>
+                    <WhatsAppIcon className="w-3 h-3 absolute -bottom-0.5 -right-0.5 bg-white rounded-full p-px" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex justify-between items-center mb-0.5">
+                      <span className="font-bold text-slate-800 text-[11px] truncate">{c.name}</span>
+                      <span className="text-[9px] text-slate-400 flex-shrink-0">10:4{c.unread + 1}</span>
+                    </div>
+                    <p className="text-slate-500 truncate text-[10px] mb-1">{c.msg}</p>
+                    <div className="flex items-center gap-1">
+                      <span className={`${c.tagClass} px-1.5 py-0.5 rounded text-[9px] font-semibold flex items-center gap-0.5`}>
+                        {c.handler === "AI" && <Zap size={8} />}{c.tag}
+                      </span>
+                      {c.unread > 0 && <span className="ml-auto w-4 h-4 rounded-full bg-brand-600 text-white text-[9px] flex items-center justify-center font-bold">{c.unread}</span>}
+                    </div>
+                  </div>
                 </div>
-                <p className="text-slate-600 truncate text-[11px]">{msg}</p>
-                {tag && <div className="mt-2 flex gap-1">
-                  <span className={`${active ? "bg-yellow-100 text-yellow-700" : "bg-red-100 text-red-600"} px-1.5 py-0.5 rounded text-[10px]`}>{tag}</span>
-                </div>}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="flex-1 bg-slate-50 flex flex-col">
-          <div className="h-14 bg-white border-b border-slate-200 flex items-center justify-between px-4">
+        <div className="flex-1 bg-slate-50 flex flex-col min-w-0">
+          <div className="h-14 bg-white border-b border-slate-200 flex items-center justify-between px-4 flex-shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-400 to-indigo-500 text-white flex items-center justify-center font-bold text-xs">B</div>
               <div>
                 <div className="flex items-center gap-1.5">
                   <div className="font-bold text-slate-800 text-xs">Budi Santoso</div>
                   <WhatsAppIcon className="w-3 h-3" />
+                  <span className="bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded text-[9px] font-semibold flex items-center gap-0.5"><Tag size={8} />Hot Lead</span>
                 </div>
-                <div className="text-[10px] text-green-600 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500" /> Online
+                <div className="text-[10px] text-slate-400 flex items-center gap-1">
+                  Ditangani oleh <span className="font-semibold text-indigo-600">CS Rina</span>
                 </div>
               </div>
             </div>
             <div className="flex gap-2">
-              <button className="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded text-[11px] hover:bg-slate-50">Assign to Me</button>
-              <button className="bg-brand-600 text-white px-3 py-1.5 rounded text-[11px] hover:bg-brand-700">Close Deal</button>
+              <button className="bg-violet-50 border border-violet-200 text-violet-600 px-2.5 py-1.5 rounded-lg text-[10px] font-semibold flex items-center gap-1"><Zap size={11} />AI Aktif</button>
+              <button className="bg-brand-600 text-white px-3 py-1.5 rounded-lg text-[11px] font-semibold hover:bg-brand-700">Tutup Deal</button>
             </div>
           </div>
 
-          <div className="flex-1 p-4 space-y-4 overflow-y-auto">
-            <div className="flex gap-3">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 flex-shrink-0" />
-              <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[80%]">
-                <p className="text-slate-700 text-[11px]">Halo Kak Budi! Ada yang bisa dibantu untuk paket Wedding-nya?</p>
-                <span className="text-[10px] text-slate-400 mt-1 block">CS Rina • 10:30</span>
+          <div className="flex-1 p-4 space-y-3 overflow-y-auto">
+            <div className="flex gap-2.5">
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-400 to-indigo-500 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">B</div>
+              <div className="bg-white p-2.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[80%]">
+                <p className="text-slate-700 text-[11px]">Halo, kaos polos warna hitam ready ga? Harganya berapa ya?</p>
+                <span className="text-[9px] text-slate-400 mt-1 block">10:28</span>
               </div>
             </div>
-            <div className="flex gap-3 flex-row-reverse">
-              <div className="w-8 h-8 rounded-full bg-brand-100 flex-shrink-0" />
-              <div className="bg-brand-600 p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[80%]">
-                <p className="text-white text-[11px]">Iya mbak, mau tanya yang paket 500 pcs itu dapet bonus apa aja ya?</p>
-                <span className="text-[10px] text-brand-200 mt-1 block text-right">10:32</span>
+
+            <div className="flex gap-2.5 flex-row-reverse">
+              <div className="w-7 h-7 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center flex-shrink-0"><Zap size={13} /></div>
+              <div className="max-w-[82%]">
+                <div className="bg-violet-50 border border-violet-100 p-2.5 rounded-2xl rounded-tr-none shadow-sm">
+                  <p className="text-slate-700 text-[11px]">Halo Kak! Kaos polos hitam <strong>ready</strong> ✅. Harga <strong>Rp 75.000/pcs</strong>, beli 3 lebih jadi Rp 65.000/pcs. Mau dibantu order? 😊</p>
+                </div>
+                <span className="text-[9px] text-violet-500 mt-1 flex items-center justify-end gap-1"><Zap size={9} />Dibalas otomatis oleh AI • 10:28</span>
               </div>
             </div>
-            <div className="flex gap-3">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 flex-shrink-0" />
-              <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[80%]">
-                <p className="text-slate-700 text-[11px]">Untuk paket 500 pcs dapet <strong>Free Kartu Ucapan</strong> + <strong>Plastik Opp</strong> ya Kak. Kebetulan hari ini promo terakhir diskon 10% lho!</p>
-                <span className="text-[10px] text-slate-400 mt-1 block">CS Rina • 10:35</span>
+
+            <div className="flex justify-center">
+              <span className="bg-slate-200/70 text-slate-500 text-[9px] px-2.5 py-1 rounded-full flex items-center gap-1"><Users size={9} />CS Rina mengambil alih percakapan</span>
+            </div>
+
+            <div className="flex gap-2.5">
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-400 to-indigo-500 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">B</div>
+              <div className="bg-white p-2.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[80%]">
+                <p className="text-slate-700 text-[11px]">Mau ambil yang 3 pcs deh. Bisa COD?</p>
+                <span className="text-[9px] text-slate-400 mt-1 block">10:40</span>
               </div>
             </div>
-            <div className="flex gap-3 flex-row-reverse">
-              <div className="w-8 h-8 rounded-full bg-brand-100 flex-shrink-0" />
-              <div className="bg-brand-600 p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[80%]">
-                <p className="text-white text-[11px]">Wah boleh deh mbak. Siap gan, saya transfer sekarang ya...</p>
-                <span className="text-[10px] text-brand-200 mt-1 block text-right">10:42</span>
+
+            <div className="flex gap-2.5 flex-row-reverse">
+              <div className="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-[10px] font-bold flex-shrink-0">R</div>
+              <div className="bg-brand-600 p-2.5 rounded-2xl rounded-tr-none shadow-sm max-w-[80%]">
+                <p className="text-white text-[11px]">Bisa kak! COD area Jakarta free ongkir. Saya bantu prosesnya ya 🙌</p>
+                <span className="text-[9px] text-brand-200 mt-1 block text-right">CS Rina • 10:41</span>
+              </div>
+            </div>
+
+            <div className="flex gap-2.5">
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-400 to-indigo-500 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">B</div>
+              <div className="bg-white p-2.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[80%]">
+                <p className="text-slate-700 text-[11px]">Siap, saya transfer sekarang ya...</p>
+                <span className="text-[9px] text-slate-400 mt-1 block">10:42</span>
               </div>
             </div>
           </div>
 
-          <div className="h-14 bg-white border-t border-slate-200 flex items-center px-4 gap-3">
-            <div className="flex-1 bg-slate-50 rounded-full px-4 py-2 text-slate-400 text-xs flex items-center">
-              Ketik pesan atau tekan '/' untuk Quick Reply...
+          <div className="px-4 py-2 bg-white border-t border-slate-100 flex-shrink-0">
+            <div className="flex gap-1.5 mb-2">
+              <span className="bg-slate-100 text-slate-500 text-[9px] px-2 py-1 rounded-full">/ongkir</span>
+              <span className="bg-slate-100 text-slate-500 text-[9px] px-2 py-1 rounded-full">/rekening</span>
+              <span className="bg-slate-100 text-slate-500 text-[9px] px-2 py-1 rounded-full">/katalog</span>
             </div>
-            <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-              <Send size={14} />
+            <div className="flex items-center gap-2">
+              <div className="flex-1 bg-slate-50 rounded-full px-3 py-2 text-slate-400 text-[10px] flex items-center">
+                Ketik pesan atau "/" untuk Quick Reply...
+              </div>
+              <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                <Send size={13} />
+              </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -258,14 +312,20 @@ function ProblemCard({ problem, index }) {
           </div>
         )}
         {index === 2 && (
-          <div className="relative w-full max-w-[90%] z-10">
-            <div className="bg-white border-l-4 border-red-500 shadow-xl rounded-lg p-4 flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-500 flex-shrink-0"><ShieldAlert size={20} /></div>
-              <div>
-                <div className="text-sm font-bold text-slate-800">Account Banned</div>
-                <div className="text-[11px] text-slate-500 leading-tight mt-1">Your phone number is banned from using WhatsApp.</div>
-              </div>
+          <div className="w-full space-y-2 z-10">
+            <div className="flex gap-2 items-center">
+              <div className="w-6 h-6 rounded-full bg-slate-200 flex-shrink-0" />
+              <div className="bg-white rounded-xl p-2 shadow-sm border border-slate-100 text-[10px] text-slate-600">Harga produk A berapa ya?</div>
             </div>
+            <div className="flex gap-2 items-center opacity-70">
+              <div className="w-6 h-6 rounded-full bg-slate-200 flex-shrink-0" />
+              <div className="bg-white rounded-xl p-2 shadow-sm border border-slate-100 text-[10px] text-slate-600">Min, harganya berapa?</div>
+            </div>
+            <div className="flex gap-2 items-center opacity-40">
+              <div className="w-6 h-6 rounded-full bg-slate-200 flex-shrink-0" />
+              <div className="bg-white rounded-xl p-2 shadow-sm border border-slate-100 text-[10px] text-slate-600">Cara ordernya gimana kak?</div>
+            </div>
+            <div className="flex justify-end"><span className="text-[9px] text-slate-400 italic">CS masih harus jawab satu-satu...</span></div>
           </div>
         )}
       </div>
@@ -287,7 +347,7 @@ export default function Home() {
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     offers: { "@type": "Offer", price: "0", priceCurrency: "IDR" },
-    description: "CRM WhatsApp Official untuk UMKM. Kelola chat, broadcast, dan tim CS dalam satu dashboard.",
+    description: "CRM WhatsApp Official untuk UMKM. Kelola chat di inbox terpadu, balas pelanggan otomatis dengan AI chatbot, dan kolaborasi tim CS dalam satu dashboard.",
     author: { "@type": "Organization", name: "Generasi Izzah Indonesia", url: "https://kolaksi.id" }
   };
 
@@ -329,23 +389,23 @@ export default function Home() {
                 </h1>
 
                 <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 max-w-xl leading-relaxed">
-                  Lead masuk tapi respon lambat? Tim CS berantakan? Broadcast bikin takut keblokir? Kolaksi bantu satukan semua chat, tim, dan data pelanggan di satu dashboard.
+                  Chat numpuk dan lead kelewat? Satukan semua pesan WhatsApp di satu inbox, biarkan <strong className="text-slate-800">AI balas pelanggan otomatis 24 jam</strong>, dan kelola tim CS tanpa rebutan HP — semua dalam satu dashboard.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
-                  <a href="#daftar" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
+                  <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
                     <UserPlus size={18} className="sm:w-5 sm:h-5" />
-                    Coba Gratis Sekarang
+                    Mulai Gratis Sekarang
                   </a>
-                  <a href="#fitur" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-slate-700 border border-slate-200 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all">
-                    Lihat Fitur
+                  <a href="#harga" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-slate-700 border border-slate-200 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all">
+                    Lihat Harga
                     <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
                   </a>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4 flex items-center gap-1">
                   <CheckCircle2 size={14} className="text-emerald-600 sm:w-4 sm:h-4" />
-                  Gratis daftar — setup cuma 5 menit
+                  Paket FREE gratis selamanya — tanpa kartu kredit
                 </p>
               </div>
 
@@ -375,8 +435,8 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 Testimoni
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Dipercaya oleh Ratusan UMKM di Indonesia</h2>
-              <p className="text-slate-600 text-base sm:text-lg">Ini kata mereka yang udah coba Kolaksi dan ngerasain bedanya.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Apa Kata Pengguna Kolaksi</h2>
+              <p className="text-slate-600 text-base sm:text-lg">Cerita UMKM yang sudah merapikan chat dan mempercepat respon dengan Kolaksi.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t) => (
@@ -404,10 +464,10 @@ export default function Home() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">Masalah yang Sering Terjadi</h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              Chat tumpuk di satu HP, CS saling tumpang tindih, lead panas kelewat. Respon lambat, pelanggan kabur, omset melayang.
+              Satu HP untuk semua chat, tim CS nggak bisa kerja bareng, dan waktu habis jawab pertanyaan yang sama terus.
             </p>
             <p className="text-brand-600 text-base sm:text-lg leading-relaxed mt-3 sm:mt-4 font-bold">
-              Kolaksi ngatasin 3 masalah utama ini.
+              Kolaksi hadir untuk ngatasin 3 masalah ini.
             </p>
           </div>
         </section>
@@ -429,7 +489,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-4">
                 Fitur
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">9 Fitur untuk Kelola WhatsApp Bisnis</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Fitur Lengkap untuk Kelola WhatsApp Bisnis</h2>
               <p className="text-slate-600 text-base sm:text-lg">Semua yang kamu butuhkan untuk mengelola komunikasi pelanggan dalam satu platform.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -471,9 +531,9 @@ export default function Home() {
 
         <section className="py-12 sm:py-16 bg-brand-50 border-y border-brand-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">Udah liat fiturnya? Langsung coba.</h3>
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">Siap rapikan chat WhatsApp bisnis kamu?</h3>
             <p className="text-slate-600 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Daftar gratis, setup cuma 5 menit. Nggak perlu kartu kredit, nggak ada komitmen.
+              Mulai dengan paket FREE — gratis selamanya, tanpa kartu kredit. Connect nomor WhatsApp dan langsung bisa dipakai.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5">
@@ -521,8 +581,12 @@ export default function Home() {
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Pilih Paket yang Cocok</h2>
               <p className="text-slate-600 text-base sm:text-lg">Mulai gratis, upgrade kapan saja sesuai kebutuhan bisnis kamu.</p>
+              <div className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs sm:text-sm font-semibold">
+                <BadgeCheck size={16} className="flex-shrink-0" />
+                Hemat sampai 20% dengan langganan tahunan — setara 2,4 bulan gratis
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {pricing.map((plan) => (
                 <div key={plan.name} className={`relative p-8 rounded-2xl border ${plan.featured ? "border-brand-500 shadow-xl shadow-brand-900/10" : "border-slate-100 shadow-sm"} bg-white hover:shadow-lg transition-all duration-300 flex flex-col`}>
                   {plan.featured && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-brand-600 text-white text-xs font-bold rounded-full">Paling Populer</span>}
@@ -531,6 +595,7 @@ export default function Home() {
                   <div className="mt-6 mb-6">
                     <span className="text-3xl font-extrabold text-slate-900">{plan.price}</span>
                     {plan.period && <span className="text-slate-400 text-sm">/{plan.period}</span>}
+                    {plan.annual && <p className="text-xs text-emerald-600 font-semibold mt-1.5">{plan.annual}</p>}
                   </div>
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((f) => (
@@ -540,12 +605,17 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <a href="#daftar" className={`w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all ${plan.featured ? "bg-brand-600 text-white hover:bg-brand-700 shadow-lg shadow-brand-600/20" : "border border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}>
+                  <a href="https://app.kolaksi.id" className={`w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all ${plan.featured ? "bg-brand-600 text-white hover:bg-brand-700 shadow-lg shadow-brand-600/20" : "border border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}>
                     {plan.name === "FREE" ? "Mulai Gratis" : `Pilih ${plan.name}`}
                     <ArrowRight size={16} />
                   </a>
                 </div>
               ))}
+            </div>
+            <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:text-sm text-slate-500">
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 size={15} className="text-emerald-500" />Tanpa kontrak, berhenti kapan saja</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 size={15} className="text-emerald-500" />Upgrade/downgrade kapan saja</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 size={15} className="text-emerald-500" />Sisa langganan jadi kredit saat upgrade</span>
             </div>
           </div>
         </section>
@@ -583,9 +653,9 @@ export default function Home() {
         <section id="daftar" className="py-14 sm:py-20 bg-brand-900 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Yuk, Mulai Kelola WhatsApp Bisnis dengan Lebih Rapi</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Mulai Kelola Chat WhatsApp Bisnis Kamu Hari Ini</h2>
             <p className="text-brand-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
-              Daftar gratis, tim kami bantu onboarding. Setup cuma 5 menit, nggak perlu kartu kredit.
+              Paket FREE tersedia selamanya — tidak perlu kartu kredit. Upgrade kapan saja saat bisnis kamu berkembang.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-brand-900 transition-all duration-200 bg-white rounded-xl hover:bg-brand-50 hover:shadow-lg">
@@ -594,9 +664,9 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-white/80">
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Gratis 14 hari</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Paket FREE gratis selamanya</span>
               <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Tanpa kartu kredit</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Cancel kapan saja</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Upgrade kapan saja</span>
             </div>
           </div>
         </section>
