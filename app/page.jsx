@@ -58,7 +58,7 @@ const features = [
   { icon: MessageCircle, title: "Inbox Terpadu", text: "Semua pesan WhatsApp masuk ke satu dashboard. Tim bisa balas dari mana saja tanpa perlu pegang HP bersama." },
   { icon: Users, title: "Multi-Agent", text: "Undang staf CS ke platform. Assign percakapan ke anggota tim tertentu dan pantau siapa yang sedang handle pelanggan." },
   { icon: Zap, title: "AI Chatbot Otomatis", text: "Balas pertanyaan pelanggan secara otomatis 24/7 berdasarkan pengetahuan yang kamu ajarkan. Kamu tetap bisa ambil alih kapan saja." },
-  { icon: Database, title: "Dokumen Pengetahuan", text: "Upload daftar produk, harga, FAQ, atau SOP bisnis kamu. AI akan belajar dari dokumen ini untuk menjawab pelanggan." },
+  { icon: Database, title: "Sumber Info AI", text: "Upload katalog produk, daftar harga, FAQ, atau SOP bisnis kamu. AI akan belajar dari data ini dan menjawab pelanggan secara otomatis." },
   { icon: Workflow, title: "API & Webhook", text: "Kirim pesan otomatis dari sistem toko online kamu saat ada order baru, pembayaran, atau pengiriman. Integrasi dengan n8n dan Zapier." },
   { icon: Inbox, title: "Quick Reply", text: "Simpan template jawaban untuk pertanyaan yang sering muncul. CS cukup pilih dan kirim — tidak perlu ngetik ulang." },
   { icon: ShieldCheck, title: "WhatsApp Business API Resmi", text: "Terhubung langsung via jalur resmi Meta. Nomor lebih terjaga, tidak mudah diblokir, dan tampil lebih profesional." },
@@ -69,8 +69,8 @@ const features = [
 const pricing = [
   { name: "FREE", price: "Gratis", period: "selamanya", description: "Untuk Anda yang baru ingin mencoba atau bisnis yang baru mulai.", features: ["1 nomor WhatsApp", "Inbox terpadu", "Riwayat pesan 7 hari"] },
   { name: "BASIC", price: "Rp 39.000", period: "bulan", annual: "Tahunan: Rp 31.200/bln (hemat 20%)", description: "Untuk usaha mikro atau solo founder yang butuh bantuan tim kecil.", features: ["Semua fitur FREE", "2 nomor WhatsApp", "2 anggota tim", "Riwayat pesan 30 hari", "API Access & Webhook"] },
-  { name: "LITE", price: "Rp 99.000", period: "bulan", annual: "Tahunan: Rp 79.200/bln (hemat 20%)", description: "Paling populer untuk UMKM yang ingin layanan pelanggan lebih cepat dengan AI.", featured: true, features: ["Semua fitur BASIC", "3 nomor WhatsApp", "5 anggota tim", "AI Chatbot otomatis", "1.000 balasan AI/bulan", "5 dokumen pengetahuan"] },
-  { name: "PRO", price: "Rp 199.000", period: "bulan", annual: "Tahunan: Rp 159.200/bln (hemat 20%)", description: "Untuk bisnis yang sudah punya tim dan butuh kapasitas lebih besar.", features: ["Semua fitur LITE", "5 nomor WhatsApp", "10 anggota tim", "5 AI Chatbot", "5.000 balasan AI/bulan", "20 dokumen pengetahuan"] },
+  { name: "LITE", price: "Rp 99.000", period: "bulan", annual: "Tahunan: Rp 79.200/bln (hemat 20%)", description: "Paling populer untuk UMKM yang ingin layanan pelanggan lebih cepat dengan AI.", featured: true, features: ["Semua fitur BASIC", "3 nomor WhatsApp", "5 anggota tim", "AI Chatbot otomatis", "1.000 balasan AI/bulan", "5 sumber info AI (produk, harga, FAQ)"] },
+  { name: "PRO", price: "Rp 199.000", period: "bulan", annual: "Tahunan: Rp 159.200/bln (hemat 20%)", description: "Untuk bisnis yang sudah punya tim dan butuh kapasitas lebih besar.", features: ["Semua fitur LITE", "5 nomor WhatsApp", "10 anggota tim", "5 AI Chatbot", "5.000 balasan AI/bulan", "20 sumber info AI (produk, SOP, katalog)"] },
 ];
 
 const testimonials = [
@@ -719,7 +719,7 @@ export default function Home() {
                       ["Anggota tim", "—", "2 orang", "5 orang", "10 orang"],
                       ["AI Chatbot otomatis", "❌", "❌", "✅", "✅"],
                       ["Balasan AI per bulan", "—", "—", "1.000", "5.000"],
-                      ["Dokumen pengetahuan", "—", "—", "5", "20"],
+                      ["Sumber info AI", "—", "—", "5", "20"],
                       ["Riwayat pesan", "7 hari", "30 hari", "30 hari", "30 hari"],
                       ["API & Webhook", "❌", "✅", "✅", "✅"],
                     ].map((row, ri) => (
@@ -774,7 +774,7 @@ export default function Home() {
             </div>
 
             <p className="text-center text-slate-500 text-sm leading-relaxed mt-6">
-              Fitur utama: inbox terpadu, AI Chatbot dengan dokumen pengetahuan, multi-agent untuk tim CS, Quick Reply, label &amp; assignment, serta API &amp; Webhook untuk integrasi dengan toko online, n8n, dan Zapier. Integrasi Instagram DM dan Facebook Messenger akan segera hadir. Kolaksi dikembangkan oleh Generasi Izzah Indonesia.
+              Fitur utama: inbox terpadu, AI Chatbot dengan sumber info (produk, harga, FAQ), multi-agent untuk tim CS, Quick Reply, label &amp; assignment, serta API &amp; Webhook untuk integrasi dengan toko online, n8n, dan Zapier. Integrasi Instagram DM dan Facebook Messenger akan segera hadir. Kolaksi dikembangkan oleh Generasi Izzah Indonesia.
             </p>
           </div>
         </section>
