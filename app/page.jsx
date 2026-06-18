@@ -606,7 +606,10 @@ export default function Home() {
               {useCases.map((item) => (
                 <div key={item.label} className="rounded-2xl bg-white border border-slate-100 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
                   <div className="h-32 overflow-hidden">
-                    <img src={item.image} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <picture>
+                      <source srcSet={item.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                      <img src={item.image} alt={item.label} width={800} height={534} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </picture>
                   </div>
                   <div className="p-5">
                     <span className="text-brand-600 text-xs font-extrabold uppercase tracking-wide">{item.label}</span>
