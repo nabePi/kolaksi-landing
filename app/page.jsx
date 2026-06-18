@@ -1,6 +1,5 @@
-"use client";
-
-import Navbar, { WhatsAppIcon, InstagramIcon, MessengerIcon } from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import { WhatsAppIcon, InstagramIcon, MessengerIcon } from "./components/icons";
 import {
   ArrowRight,
   BadgeCheck,
@@ -816,7 +815,7 @@ export default function Home() {
         </section>
 
         <section id="daftar" className="py-14 sm:py-20 bg-brand-900 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+          <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:32px_32px]" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Mulai Kelola Chat WhatsApp Bisnis Kamu Hari Ini</h2>
             <p className="text-brand-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">

@@ -39,6 +39,13 @@
   }
   .animate-blob {
     animation: blob 7s infinite;
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob {
+    animation: none;
   }
 }
 

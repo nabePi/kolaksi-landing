@@ -88,6 +88,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://app.kolaksi.id" />
         <link rel="alternate" hrefLang="id-ID" href="https://kolaksi.id/" />
         <link rel="alternate" hrefLang="x-default" href="https://kolaksi.id/" />
         <meta name="author" content="Generasi Izzah Indonesia" />
