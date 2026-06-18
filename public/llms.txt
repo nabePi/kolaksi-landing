@@ -1,5 +1,7 @@
 # Kolaksi
 
+# Kolaksi
+
 > Kolaksi adalah CRM WhatsApp Official untuk UMKM Indonesia. Kolaksi membantu bisnis mengelola semua chat WhatsApp dalam satu inbox terpadu, membalas pelanggan secara otomatis dengan AI Chatbot 24 jam, dan berkolaborasi bersama tim CS dalam satu dashboard. Kolaksi menggunakan WhatsApp Business API resmi dari Meta.
 
 ## Ringkasan
