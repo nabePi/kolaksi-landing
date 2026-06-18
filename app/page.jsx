@@ -452,11 +452,6 @@ export default function Home() {
                   Paket FREE gratis selamanya — tanpa kartu kredit
                 </p>
 
-                <div className="mt-5 inline-flex items-center gap-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-200">
-                  <span className="text-xs text-slate-500 font-medium">Tech Provider</span>
-                  <div className="w-px h-4 bg-slate-200" />
-                  <img src="/images/meta-logo.svg" alt="Meta" height={16} className="h-4 w-auto" loading="eager" />
-                </div>
               </div>
 
               <div className="relative hidden sm:block" aria-hidden="true">
@@ -747,13 +742,6 @@ export default function Home() {
                 </table>
               </div>
               <p className="text-center text-xs text-slate-500 mt-4">Semua paket menggunakan WhatsApp Business API resmi dari Meta. Langganan tahunan hemat sampai 20%. <span className="font-medium">Harga berlaku per Juni 2026.</span></p>
-              <div className="flex justify-center mt-4">
-                <div className="inline-flex items-center gap-2.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-200">
-                  <span className="text-xs text-slate-500 font-medium">Tech Provider</span>
-                  <div className="w-px h-4 bg-slate-200" />
-                  <img src="/images/meta-logo.svg" alt="Meta" height={16} className="h-4 w-auto" loading="lazy" />
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -877,10 +865,6 @@ export default function Home() {
             <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
               <Star size={14} className="text-amber-400 fill-amber-400 sm:w-4 sm:h-4" />
               4.8/5 dari 30+ Pengguna
-            </div>
-            <div className="flex items-center gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">
-              <span>Tech Provider</span>
-              <img src="/images/meta-logo-white.svg" alt="Meta" height={14} className="h-3.5 w-auto" loading="lazy" />
             </div>
           </div>
 
