@@ -13,6 +13,7 @@ import {
   Inbox,
   Layers3,
   LogIn,
+  Megaphone,
   Menu,
   MessageCircle,
   ShieldCheck,
@@ -56,6 +57,7 @@ const problems = [
 
 const features = [
   { icon: MessageCircle, title: "Inbox Terpadu", text: "Semua pesan WhatsApp masuk ke satu dashboard. Tim bisa balas dari mana saja tanpa perlu pegang HP bersama." },
+  { icon: Megaphone, title: "Broadcast WhatsApp", text: "Kirim pesan promo, pengumuman, atau follow-up ke banyak pelanggan sekaligus dengan template resmi — aman dari banned. Biaya per pesan ditagihkan langsung oleh Meta ke akun Facebook kamu, tanpa markup." },
   { icon: Users, title: "Multi-Agent", text: "Undang staf CS ke platform. Assign percakapan ke anggota tim tertentu dan pantau siapa yang sedang handle pelanggan." },
   { icon: Zap, title: "AI Chatbot Otomatis", text: "Balas pertanyaan pelanggan secara otomatis 24/7 berdasarkan pengetahuan yang kamu ajarkan. Kamu tetap bisa ambil alih kapan saja." },
   { icon: Database, title: "Sumber Info AI", text: "Upload katalog produk, daftar harga, FAQ, atau SOP bisnis kamu. AI akan belajar dari data ini dan menjawab pelanggan secara otomatis." },
@@ -95,6 +97,7 @@ const faqs = [
   { question: "Apa itu AI Chatbot dan balasan AI?", answer: "AI Chatbot membalas pertanyaan pelanggan secara otomatis 24 jam berdasarkan informasi yang kamu ajarkan (produk, harga, FAQ). Setiap balasan otomatis dihitung 1 balasan AI. Paket LITE sudah termasuk 1.000 balasan/bulan, PRO 5.000 balasan/bulan. Kamu tetap bisa ambil alih percakapan kapan saja." },
   { question: "AI Chatbot bisa Bahasa Indonesia?", answer: "Ya, AI sepenuhnya mendukung Bahasa Indonesia dan menyesuaikan gaya bahasa sesuai cara kamu mengajarkannya." },
   { question: "Berapa nomor WhatsApp yang bisa dihubungkan?", answer: "Tergantung paket: FREE (1), BASIC (2), LITE (3), PRO (5). Setiap nomor menggunakan WhatsApp Business API resmi dari Meta, jadi lebih aman dan profesional." },
+  { question: "Apakah bisa kirim broadcast / pesan massal ke pelanggan?", answer: "Bisa. Kolaksi mendukung broadcast WhatsApp menggunakan template resmi Meta — aman dari risiko banned. Biaya per pesan broadcast ditagihkan langsung oleh Meta ke akun Facebook Business kamu sesuai tarif resmi mereka. Kolaksi tidak menambahkan biaya apapun di atas tarif Meta." },
   { question: "Kapan Instagram dan Facebook Messenger tersedia?", answer: "Integrasi Instagram DM dan Facebook Messenger sedang dalam pengembangan dan akan segera hadir dalam satu inbox bersama WhatsApp. Kami akan beri tahu saat fiturnya siap." }
 ];
 

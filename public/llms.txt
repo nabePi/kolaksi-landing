@@ -17,6 +17,7 @@
 ## Fitur Utama
 
 - Inbox Terpadu: semua pesan WhatsApp masuk ke satu dashboard, tim bisa membalas dari mana saja.
+- Broadcast WhatsApp: kirim pesan promo atau pengumuman ke banyak pelanggan dengan template resmi Meta, aman dari banned. Biaya per pesan ditagihkan langsung oleh Meta ke akun Facebook Business pengguna.
 - AI Chatbot Otomatis: membalas pertanyaan pelanggan 24 jam berdasarkan sumber info yang diajarkan (produk, harga, FAQ). Agen manusia bisa mengambil alih kapan saja.
 - Multi-Agent: undang staf CS, assign percakapan, dan kolaborasi tanpa rebutan HP.
 - Sumber Info AI: melatih AI dengan katalog produk, harga, FAQ, dan SOP bisnis kamu.
