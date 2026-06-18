@@ -449,7 +449,7 @@ export default function Home() {
 
                 <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4 flex items-center gap-1">
                   <CheckCircle2 size={14} className="text-emerald-600 sm:w-4 sm:h-4" />
-                  Paket FREE gratis selamanya — tanpa kartu kredit
+                  Daftar gratis, langsung bisa dipakai
                 </p>
 
                 <div className="mt-5 inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 shadow-sm">
@@ -604,7 +604,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">Siap rapikan chat WhatsApp bisnis kamu?</h3>
             <p className="text-slate-600 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Mulai dengan paket FREE — gratis selamanya, tanpa kartu kredit. Connect nomor WhatsApp dan langsung bisa dipakai.
+              Mulai dengan paket FREE — daftar gratis, langsung bisa dipakai. Connect nomor WhatsApp dan mulai kelola chat hari ini.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-brand-600 rounded-full hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5">
@@ -654,11 +654,11 @@ export default function Home() {
                 Cara Mulai
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Mulai Pakai Kolaksi dalam 3 Langkah</h2>
-              <p className="text-slate-600 text-base sm:text-lg">Tanpa ribet, tanpa kartu kredit. Bisnis kamu siap balas pelanggan lebih cepat hari ini juga.</p>
+              <p className="text-slate-600 text-base sm:text-lg">Tanpa ribet, langsung bisa dipakai. Bisnis kamu siap balas pelanggan lebih cepat hari ini juga.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { icon: UserPlus, step: "1", title: "Daftar Gratis", text: "Buat akun Kolaksi dalam hitungan menit. Mulai dari paket FREE, tanpa kartu kredit." },
+                { icon: UserPlus, step: "1", title: "Daftar Gratis", text: "Buat akun Kolaksi dalam hitungan menit. Mulai dari paket FREE, daftar gratis langsung bisa dipakai." },
                 { icon: WhatsAppIcon, step: "2", title: "Hubungkan WhatsApp", text: "Sambungkan nomor WhatsApp bisnis kamu lewat WhatsApp Business API resmi dari Meta." },
                 { icon: Zap, step: "3", title: "Balas & Otomasi", text: "Balas chat dari satu inbox, ajari AI Chatbot, dan undang tim CS untuk kolaborasi." },
               ].map((s) => {
@@ -680,7 +680,7 @@ export default function Home() {
                 <UserPlus size={18} className="sm:w-5 sm:h-5" />
                 Mulai Gratis Sekarang
               </a>
-              <p className="text-xs sm:text-sm text-slate-500 mt-3">Gratis selamanya • Tanpa kartu kredit • Upgrade kapan saja</p>
+              <p className="text-xs sm:text-sm text-slate-500 mt-3">Gratis selamanya • Langsung bisa dipakai • Upgrade kapan saja</p>
             </div>
           </div>
         </section>
@@ -846,7 +846,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Mulai Kelola Chat WhatsApp Bisnis Kamu Hari Ini</h2>
             <p className="text-brand-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
-              Paket FREE tersedia selamanya — tidak perlu kartu kredit. Upgrade kapan saja saat bisnis kamu berkembang.
+              Daftar gratis, langsung bisa dipakai. Upgrade kapan saja saat bisnis kamu berkembang.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <a href="https://app.kolaksi.id" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-brand-900 transition-all duration-200 bg-white rounded-xl hover:bg-brand-50 hover:shadow-lg">
@@ -856,7 +856,7 @@ export default function Home() {
             </div>
             <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-white/80">
               <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Paket FREE gratis selamanya</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Tanpa kartu kredit</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Langsung bisa dipakai</span>
               <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-emerald-400 sm:w-[14px] sm:h-[14px]" />Upgrade kapan saja</span>
             </div>
           </div>
