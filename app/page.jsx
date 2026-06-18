@@ -612,8 +612,8 @@ export default function Home() {
                     </picture>
                   </div>
                   <div className="p-5">
-                    <span className="text-brand-600 text-xs font-extrabold uppercase tracking-wide">{item.label}</span>
-                    <h3 className="text-sm font-bold text-slate-900 mt-1 leading-snug">{item.title}</h3>
+                    <h3 className="text-brand-600 text-xs font-extrabold uppercase tracking-wide">{item.label}</h3>
+                    <p className="text-sm text-slate-700 mt-1 leading-snug">{item.title}</p>
                   </div>
                 </div>
               ))}
