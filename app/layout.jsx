@@ -78,7 +78,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@kolaksiid",
     creator: "@kolaksiid",
-    title: "Kolaksi — CRM WhatsApp & AI Chatbot untuk UMKM",
+    title: "Kolaksi — CRM WhatsApp & AI Chatbot untuk UMKM Indonesia",
     description: "Satukan chat WhatsApp di satu inbox, balas pelanggan otomatis dengan AI Chatbot 24 jam, dan kelola tim CS. WhatsApp Business API resmi. Mulai gratis, tanpa kartu kredit.",
     images: ["/opengraph-image"]
   }
