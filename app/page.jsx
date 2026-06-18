@@ -424,14 +424,6 @@ export default function Home() {
                     FB Messenger
                     <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
                   </div>
-                  <img
-                    src="/images/meta-tech-provider.png"
-                    alt="Meta Tech Provider"
-                    width={81}
-                    height={32}
-                    className="h-8 w-auto"
-                    loading="eager"
-                  />
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 sm:mb-6 leading-tight">
