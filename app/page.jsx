@@ -418,12 +418,12 @@ export default function Home() {
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs sm:text-sm font-medium">
                     <InstagramIcon className="w-4 h-4 text-pink-500" />
                     Instagram DM
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
                   </div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs sm:text-sm font-medium">
                     <MessengerIcon className="w-4 h-4 text-blue-500" />
                     FB Messenger
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
                   </div>
                 </div>
 
@@ -454,7 +454,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="relative hidden sm:block">
+              <div className="relative hidden sm:block" aria-hidden="true">
                 <DashboardMockup />
               </div>
             </div>
@@ -681,7 +681,7 @@ export default function Home() {
                   <div className="mt-6 mb-6">
                     <span className="text-3xl font-extrabold text-slate-900">{plan.price}</span>
                     {plan.period && <span className="text-slate-400 text-sm">/{plan.period}</span>}
-                    {plan.annual && <p className="text-xs text-emerald-600 font-semibold mt-1.5">{plan.annual}</p>}
+                    {plan.annual && <p className="text-xs text-emerald-700 font-semibold mt-1.5">{plan.annual}</p>}
                   </div>
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((f) => (
@@ -771,7 +771,7 @@ export default function Home() {
                       <Icon size={18} />
                     </div>
                     <div>
-                      <div className="text-[11px] font-bold uppercase tracking-wide text-slate-400">{f.label}</div>
+                      <div className="text-[11px] font-bold uppercase tracking-wide text-slate-500">{f.label}</div>
                       <div className="text-sm font-semibold text-slate-800 mt-0.5">{f.value}</div>
                     </div>
                   </div>
@@ -873,17 +873,17 @@ export default function Home() {
                 <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-brand-900/50">K</div>
                 <span className="text-xl font-bold text-white tracking-tight">Kolaksi</span>
               </div>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Platform CRM WhatsApp Official yang membantu UMKM menyatukan chat di satu inbox, membalas pelanggan otomatis dengan AI Chatbot, dan mengelola tim CS dengan WhatsApp Business API resmi.</p>
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">Platform CRM WhatsApp Official yang membantu UMKM menyatukan chat di satu inbox, membalas pelanggan otomatis dengan AI Chatbot, dan mengelola tim CS dengan WhatsApp Business API resmi.</p>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-6">Produk</h4>
+              <h3 className="text-white font-bold mb-6">Produk</h3>
               <ul className="space-y-4 text-sm">
                 <li><a href="#fitur" className="hover:text-brand-400 transition-colors">Fitur</a></li>
                 <li><a href="#harga" className="hover:text-brand-400 transition-colors">Harga</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-6">Kontak</h4>
+              <h3 className="text-white font-bold mb-6">Kontak</h3>
               <ul className="space-y-4 text-sm">
                 <li><a href="#faq" className="hover:text-brand-400 transition-colors">FAQ</a></li>
                 <li><a href="https://wa.me/6285177854195" target="_blank" rel="noopener noreferrer" className="hover:text-brand-400 transition-colors flex items-center gap-2">
@@ -891,11 +891,11 @@ export default function Home() {
                   0851 7785 4195
                 </a></li>
                 <li><a href="mailto:hello@kolaksi.id" className="hover:text-brand-400 transition-colors">hello@kolaksi.id</a></li>
-                <li className="pt-2 text-slate-500 text-xs">Generasi Izzah Indonesia<br />Jalan Raya Panggung No 3, Jatibening, Pondok Gede,<br />Bekasi, Jawa Barat 17412</li>
+                <li className="pt-2 text-slate-400 text-xs">Generasi Izzah Indonesia<br />Jalan Raya Panggung No 3, Jatibening, Pondok Gede,<br />Bekasi, Jawa Barat 17412</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-6">Legal</h4>
+              <h3 className="text-white font-bold mb-6">Legal</h3>
               <ul className="space-y-4 text-sm">
                 <li><a href="/privacy" className="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
                 <li><a href="/terms" className="hover:text-brand-400 transition-colors">Terms of Service</a></li>
