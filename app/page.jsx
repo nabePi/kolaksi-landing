@@ -75,9 +75,9 @@ const pricing = [
 ];
 
 const testimonials = [
-  { quote: "Kolaksi bantu tim saya balas chat 3x lebih cepat. Lead yang dulu kelewat sekarang jadi closing.", name: "Andi Wijaya", role: "Owner, Fashion Store Jakarta" },
-  { quote: "Sebelumnya kami share 1 HP untuk 3 CS. Sekarang semua tim bisa kerja bareng tanpa tumpang tindih.", name: "Rina Susanti", role: "Manager, Wedding Organizer Bandung" },
-  { quote: "AI Chatbot-nya balas pertanyaan harga dan stok otomatis. CS saya sekarang fokus closing, bukan jawab pertanyaan yang sama terus.", name: "Budi Santoso", role: "Founder, Frozen Food Surabaya" }
+  { quote: "Kolaksi bantu tim saya balas chat 3x lebih cepat. Lead yang dulu kelewat sekarang jadi closing.", name: "Andi Wijaya", role: "Owner, Fashion Store Jakarta", date: "Mei 2026" },
+  { quote: "Sebelumnya kami share 1 HP untuk 3 CS. Sekarang semua tim bisa kerja bareng tanpa tumpang tindih.", name: "Rina Susanti", role: "Manager, Wedding Organizer Bandung", date: "Juni 2026" },
+  { quote: "AI Chatbot-nya balas pertanyaan harga dan stok otomatis. CS saya sekarang fokus closing, bukan jawab pertanyaan yang sama terus.", name: "Budi Santoso", role: "Founder, Frozen Food Surabaya", date: "Juni 2026" }
 ];
 
 const useCases = [
@@ -496,6 +496,7 @@ export default function Home() {
                     <div>
                       <p className="text-slate-900 font-bold text-sm">{t.name}</p>
                       <p className="text-slate-500 text-xs">{t.role}</p>
+                      {t.date && <p className="text-slate-400 text-xs mt-0.5">{t.date}</p>}
                     </div>
                   </div>
                 </div>
@@ -551,7 +552,7 @@ export default function Home() {
               })}
               <div className="p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
                 <div className="absolute top-3 right-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-1 rounded-full">Segera Hadir</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-1 rounded-full">Segera Hadir · Q3 2026</span>
                 </div>
                 <div className="w-10 h-10 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center mb-4">
                   <InstagramIcon className="w-5 h-5" />
@@ -561,7 +562,7 @@ export default function Home() {
               </div>
               <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
                 <div className="absolute top-3 right-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-1 rounded-full">Segera Hadir</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-1 rounded-full">Segera Hadir · Q3 2026</span>
                 </div>
                 <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
                   <MessengerIcon className="w-5 h-5" />
@@ -739,7 +740,7 @@ export default function Home() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-center text-xs text-slate-500 mt-4">Semua paket menggunakan WhatsApp Business API resmi dari Meta. Langganan tahunan hemat sampai 20%.</p>
+              <p className="text-center text-xs text-slate-500 mt-4">Semua paket menggunakan WhatsApp Business API resmi dari Meta. Langganan tahunan hemat sampai 20%. <span className="font-medium">Harga berlaku per Juni 2026.</span></p>
             </div>
           </div>
         </section>
@@ -903,7 +904,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 gap-4">
-            <p>&copy; 2026 Generasi Izzah Indonesia. All rights reserved.</p>
+            <p>&copy; 2026 Generasi Izzah Indonesia. All rights reserved. <span className="text-slate-500">· Diperbarui Juni 2026</span></p>
             <div className="flex items-center gap-6">
               <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500" />System Operational</span>
               <p>Made in Indonesia</p>
