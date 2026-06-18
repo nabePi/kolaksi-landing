@@ -424,18 +424,6 @@ export default function Home() {
                     FB Messenger
                     <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded-full">Segera</span>
                   </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-medium text-slate-700">
-                    <svg width="18" height="10" viewBox="0 0 36 20" fill="none" aria-hidden="true">
-                      <defs>
-                        <linearGradient id="meta-g" x1="6" y1="10" x2="30" y2="10" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#0082FB" />
-                          <stop offset="1" stopColor="#0052CC" />
-                        </linearGradient>
-                      </defs>
-                      <path fill="url(#meta-g)" d="M18 10C17 7 15 5 12 5C8.5 5 6 7.5 6 10C6 12.5 8.5 15 12 15C15 15 17 13 18 10ZM18 10C19 7 21 5 24 5C27.5 5 30 7.5 30 10C30 12.5 27.5 15 24 15C21 15 19 13 18 10Z" />
-                    </svg>
-                    Meta Tech Provider
-                  </div>
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 sm:mb-6 leading-tight">
@@ -463,6 +451,23 @@ export default function Home() {
                   <CheckCircle2 size={14} className="text-emerald-600 sm:w-4 sm:h-4" />
                   Paket FREE gratis selamanya — tanpa kartu kredit
                 </p>
+
+                <div className="mt-5 inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 shadow-sm">
+                  <svg width="48" height="26" viewBox="0 0 36 20" fill="none" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="meta-hero" x1="6" y1="10" x2="30" y2="10" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#0082FB" />
+                        <stop offset="1" stopColor="#0052CC" />
+                      </linearGradient>
+                    </defs>
+                    <path fill="url(#meta-hero)" d="M18 10C17 7 15 5 12 5C8.5 5 6 7.5 6 10C6 12.5 8.5 15 12 15C15 15 17 13 18 10ZM18 10C19 7 21 5 24 5C27.5 5 30 7.5 30 10C30 12.5 27.5 15 24 15C21 15 19 13 18 10Z" />
+                  </svg>
+                  <div className="w-px h-8 bg-slate-200" />
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-0.5">Certified Partner</div>
+                    <div className="text-sm font-bold text-slate-800">Meta Tech Provider</div>
+                  </div>
+                </div>
 
               </div>
 
