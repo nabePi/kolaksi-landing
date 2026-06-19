@@ -10,12 +10,14 @@ import {
   HelpCircle,
   History,
   Inbox,
+  Kanban,
   Layers3,
   LogIn,
   Megaphone,
   Menu,
   MessageCircle,
   ShieldCheck,
+  Smartphone,
   Star,
   Tag,
   Send,
@@ -65,6 +67,8 @@ const features = [
   { icon: ShieldCheck, title: "WhatsApp Business API Resmi", text: "Terhubung langsung via jalur resmi Meta. Nomor lebih terjaga, tidak mudah diblokir, dan tampil lebih profesional." },
   { icon: History, title: "Riwayat Percakapan", text: "Akses histori chat pelanggan hingga 30 hari ke belakang. Tidak perlu scroll HP — semua tersimpan di dashboard." },
   { icon: Tag, title: "Label & Assignment", text: "Beri label pada percakapan dan assign ke CS tertentu. Kerja tim lebih terstruktur, tidak ada chat yang terlewat." },
+  { icon: Smartphone, title: "WhatsApp Coexistence", text: "Nomor WhatsApp kamu tetap bisa dipakai di HP seperti biasa. Dengan Coexistence, Kolaksi terhubung ke nomor yang sama tanpa memutus akses aplikasi WA yang sudah berjalan." },
+  { icon: Kanban, title: "Sales Pipeline", text: "Kelola prospek dari kontak pertama sampai closing dalam tampilan Kanban. Tandai status setiap lead, assign ke CS, dan pastikan tidak ada peluang yang terlewat." },
 ];
 
 const pricing = [
