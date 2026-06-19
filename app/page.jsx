@@ -69,9 +69,9 @@ const features = [
 
 const pricing = [
   { name: "FREE", price: "Gratis", period: "selamanya", description: "Untuk Anda yang baru ingin mencoba atau bisnis yang baru mulai.", features: ["1 nomor WhatsApp", "Inbox terpadu", "Riwayat pesan 7 hari"] },
-  { name: "BASIC", price: "Rp 39.000", period: "bulan", annual: "Tahunan: Rp 31.200/bln (hemat 20%)", description: "Untuk usaha mikro atau solo founder yang butuh bantuan tim kecil.", features: ["Semua fitur FREE", "2 nomor WhatsApp", "2 anggota tim", "Riwayat pesan 30 hari", "API Access & Webhook"] },
-  { name: "LITE", price: "Rp 99.000", period: "bulan", annual: "Tahunan: Rp 79.200/bln (hemat 20%)", description: "Paling populer untuk UMKM yang ingin layanan pelanggan lebih cepat dengan AI.", featured: true, features: ["Semua fitur BASIC", "3 nomor WhatsApp", "5 anggota tim", "AI Chatbot otomatis", "1.000 balasan AI/bulan", "5 sumber info AI (produk, harga, FAQ)"] },
-  { name: "PRO", price: "Rp 199.000", period: "bulan", annual: "Tahunan: Rp 159.200/bln (hemat 20%)", description: "Untuk bisnis yang sudah punya tim dan butuh kapasitas lebih besar.", features: ["Semua fitur LITE", "5 nomor WhatsApp", "10 anggota tim", "5 AI Chatbot", "5.000 balasan AI/bulan", "20 sumber info AI (produk, SOP, katalog)"] },
+  { name: "BASIC", price: "Rp 49.000", period: "bulan", annual: "Tahunan: Rp 39.200/bln (hemat 20%)", description: "Untuk usaha mikro atau solo founder yang butuh bantuan tim kecil.", features: ["Semua fitur FREE", "2 nomor WhatsApp", "3 anggota tim", "Riwayat pesan 30 hari", "API Access & Webhook"] },
+  { name: "LITE", price: "Rp 149.000", period: "bulan", annual: "Tahunan: Rp 119.200/bln (hemat 20%)", description: "Paling populer untuk UMKM yang ingin layanan pelanggan lebih cepat dengan AI.", featured: true, features: ["Semua fitur BASIC", "3 nomor WhatsApp", "5 anggota tim", "AI Chatbot otomatis", "2.000 balasan AI/bulan", "10 sumber info AI (produk, harga, FAQ)"] },
+  { name: "PRO", price: "Rp 249.000", period: "bulan", annual: "Tahunan: Rp 199.200/bln (hemat 20%)", description: "Untuk bisnis yang sudah punya tim dan butuh kapasitas lebih besar.", features: ["Semua fitur LITE", "5 nomor WhatsApp", "10 anggota tim", "5 AI Agents", "6.000 balasan AI/bulan", "30 sumber info AI (produk, SOP, katalog)"] },
 ];
 
 const testimonials = [
@@ -93,7 +93,7 @@ const faqs = [
   { question: "Apakah bisa ganti paket kapan saja?", answer: "Bisa. Kamu bisa upgrade atau downgrade kapan saja dan langsung aktif. Jika ada sisa masa langganan, nilainya diperhitungkan sebagai kredit untuk paket baru." },
   { question: "Apakah ada kontrak jangka panjang?", answer: "Tidak ada kontrak. Paket bulanan bisa dihentikan kapan saja. Paket tahunan aktif sampai masa berlakunya habis dan kamu hemat sampai 20%." },
   { question: "Bagaimana cara pembayarannya?", answer: "Tersedia via QRIS, Transfer Bank (BCA, BNI, Mandiri, Permata), dan E-Wallet. Semua proses pembayaran ada di menu Billing dalam aplikasi." },
-  { question: "Apa itu AI Chatbot dan balasan AI?", answer: "AI Chatbot membalas pertanyaan pelanggan secara otomatis 24 jam berdasarkan informasi yang kamu ajarkan (produk, harga, FAQ). Setiap balasan otomatis dihitung 1 balasan AI. Paket LITE sudah termasuk 1.000 balasan/bulan, PRO 5.000 balasan/bulan. Kamu tetap bisa ambil alih percakapan kapan saja." },
+  { question: "Apa itu AI Chatbot dan balasan AI?", answer: "AI Chatbot membalas pertanyaan pelanggan secara otomatis 24 jam berdasarkan informasi yang kamu ajarkan (produk, harga, FAQ). Setiap balasan otomatis dihitung 1 balasan AI. Paket LITE sudah termasuk 2.000 balasan/bulan, PRO 6.000 balasan/bulan. Kamu tetap bisa ambil alih percakapan kapan saja." },
   { question: "AI Chatbot bisa Bahasa Indonesia?", answer: "Ya, AI sepenuhnya mendukung Bahasa Indonesia dan menyesuaikan gaya bahasa sesuai cara kamu mengajarkannya." },
   { question: "Berapa nomor WhatsApp yang bisa dihubungkan?", answer: "Tergantung paket: FREE (1), BASIC (2), LITE (3), PRO (5). Setiap nomor menggunakan WhatsApp Business API resmi dari Meta, jadi lebih aman dan profesional." },
   { question: "Apakah bisa kirim broadcast / pesan massal ke pelanggan?", answer: "Bisa. Kolaksi mendukung broadcast WhatsApp menggunakan template resmi Meta — aman dari risiko banned. Biaya per pesan broadcast ditagihkan langsung oleh Meta ke akun Facebook Business kamu sesuai tarif resmi mereka. Kolaksi tidak menambahkan biaya apapun di atas tarif Meta." },
@@ -351,9 +351,9 @@ export default function Home() {
     operatingSystem: "Web",
     offers: [
       { "@type": "Offer", name: "FREE", price: "0", priceCurrency: "IDR" },
-      { "@type": "Offer", name: "BASIC", price: "39000", priceCurrency: "IDR" },
-      { "@type": "Offer", name: "LITE", price: "99000", priceCurrency: "IDR" },
-      { "@type": "Offer", name: "PRO", price: "199000", priceCurrency: "IDR" }
+      { "@type": "Offer", name: "BASIC", price: "49000", priceCurrency: "IDR" },
+      { "@type": "Offer", name: "LITE", price: "149000", priceCurrency: "IDR" },
+      { "@type": "Offer", name: "PRO", price: "249000", priceCurrency: "IDR" }
     ],
     description: "CRM WhatsApp Official untuk UMKM. Kelola chat di inbox terpadu, balas pelanggan otomatis dengan AI chatbot, dan kolaborasi tim CS dalam satu dashboard.",
     author: { "@type": "Organization", name: "Generasi Izzah Indonesia", url: "https://kolaksi.id" }
@@ -695,7 +695,7 @@ export default function Home() {
               <p className="text-slate-600 text-base sm:text-lg">Mulai gratis, upgrade kapan saja sesuai kebutuhan bisnis kamu.</p>
               <div className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs sm:text-sm font-semibold">
                 <BadgeCheck size={16} className="flex-shrink-0" />
-                Hemat sampai 20% dengan langganan tahunan — setara 2 bulan gratis
+                Hemat sampai 20% dengan langganan tahunan — setara 2,4 bulan gratis
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -746,12 +746,13 @@ export default function Home() {
                   </thead>
                   <tbody className="text-slate-600">
                     {[
-                      ["Harga per bulan", "Gratis", "Rp 39.000", "Rp 99.000", "Rp 199.000"],
+                      ["Harga per bulan", "Gratis", "Rp 49.000", "Rp 149.000", "Rp 249.000"],
                       ["Nomor WhatsApp", "1", "2", "3", "5"],
-                      ["Anggota tim", "—", "2 orang", "5 orang", "10 orang"],
+                      ["Anggota tim", "—", "3 orang", "5 orang", "10 orang"],
                       ["AI Chatbot otomatis", "❌", "❌", "✅", "✅"],
-                      ["Balasan AI per bulan", "—", "—", "1.000", "5.000"],
-                      ["Sumber info AI", "—", "—", "5", "20"],
+                      ["AI Agents", "—", "—", "2", "5"],
+                      ["Balasan AI per bulan", "—", "—", "2.000", "6.000"],
+                      ["Sumber info AI", "—", "—", "10", "30"],
                       ["Riwayat pesan", "7 hari", "30 hari", "30 hari", "30 hari"],
                       ["API & Webhook", "❌", "✅", "✅", "✅"],
                     ].map((row, ri) => (
@@ -786,7 +787,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mt-8">
               {[
                 { icon: Users, label: "Untuk siapa", value: "UMKM, toko online, kuliner, jasa & klinik" },
-                { icon: BadgeCheck, label: "Harga", value: "Mulai gratis selamanya — Rp 39rb s/d 199rb/bln" },
+                { icon: BadgeCheck, label: "Harga", value: "Mulai gratis selamanya — Rp 49rb s/d 249rb/bln" },
                 { icon: ShieldCheck, label: "Teknologi", value: "WhatsApp Business API resmi dari Meta" },
                 { icon: Zap, label: "Keunggulan", value: "AI Chatbot balas pelanggan otomatis 24 jam" },
               ].map((f) => {
